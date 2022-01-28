@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeItemActivity"
+    android:layout_width="140dp"
+    android:layout_height="234dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/top_item_logo"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            app:layout_constraintEnd_toEndOf="@id/top_item"
+            app:layout_constraintStart_toStartOf="@id/top_item"
+            app:layout_constraintTop_toTopOf="@id/top_item"
+            tools:srcCompat="@color/black"
+            android:alpha="0.3"
+            android:contentDescription="@string/logo_brewery" />
+
+        <TextView
+            android:id="@+id/top_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:lineHeight="24dp"
+            android:text="@string/top_item_title"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/top_item"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/top_item"
+            app:layout_constraintTop_toBottomOf="@id/top_item_logo" />
+
+        <ImageView
+            android:id="@+id/top_item_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/top_item_name"
+            app:layout_constraintTop_toBottomOf="@id/top_item_name"
+            app:srcCompat="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/top_item_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:fontFamily="@font/quicksand_regular"
+            android:lineHeight="14dp"
+            android:text="@string/rating"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/top_item_star"
+            app:layout_constraintStart_toEndOf="@id/top_item_star"
+            app:layout_constraintTop_toTopOf="@id/top_item_star" />
+
+        <TextView
+            android:id="@+id/top_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/quicksand_regular"
+            android:lineHeight="14dp"
+            android:text="@string/type"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/top_item"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/top_item_star"
+            app:layout_constraintTop_toBottomOf="@id/top_item_star" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/km"
+            android:fontFamily="@font/quicksand_regular"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/top_item"
+            app:layout_constraintEnd_toEndOf="@id/top_item"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="@id/top_item_type"
+            app:layout_constraintTop_toBottomOf="@id/top_item_type" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

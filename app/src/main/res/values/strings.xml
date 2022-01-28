@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Breweryees</string>
+    <string name="top_title">As 10 mais bem avaliadas:</string>
+    <string name="logo_brewery">logo da cervejaria</string>
+    <string name="top_item_title">Cervejaria A</string>
+    <string name="km">0,9km</string>
+    <string name="rating">5.0</string>
+    <string name="type">Tipo</string>
 </resources>
