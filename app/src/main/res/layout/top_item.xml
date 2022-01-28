@@ -2,12 +2,13 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".HomeItemActivity"
     android:layout_width="140dp"
     android:layout_height="234dp"
     android:layout_marginLeft="6dp"
     android:layout_marginRight="6dp"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:showIn="@layout/activity_main">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_item"
@@ -21,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="@id/top_item"
             app:layout_constraintStart_toStartOf="@id/top_item"
             app:layout_constraintTop_toTopOf="@id/top_item"
-            tools:srcCompat="@color/black"
+            app:srcCompat="@color/black"
             android:alpha="0.3"
             android:contentDescription="@string/logo_brewery" />
 
@@ -80,7 +81,7 @@
             app:layout_constraintTop_toBottomOf="@id/top_item_star" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/top_item_distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/km"
