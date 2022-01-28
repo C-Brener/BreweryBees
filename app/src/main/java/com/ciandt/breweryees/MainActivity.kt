@@ -20,7 +20,5 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        topRecyclerView.adapter = CervejariaAdapter(fakeCervejaria())
-        topRecyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
     }
 }
