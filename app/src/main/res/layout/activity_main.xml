@@ -8,6 +8,126 @@
     android:background="@color/background"
     >
 
+
+    <Toolbar
+        android:id="@+id/myToolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/favoriteButton"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/myToolbar"
+        app:layout_constraintTop_toTopOf="@+id/myToolbar"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+    <ImageButton
+        android:id="@+id/BeerButton"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@color/black"
+        android:minHeight="48dp"
+        app:layout_constraintTop_toTopOf="@id/myToolbar"
+        app:layout_constraintStart_toStartOf="@id/myToolbar"
+        app:layout_constraintBottom_toBottomOf="@id/myToolbar"
+        android:layout_marginVertical="16dp"
+        app:layout_editor_absoluteY="0dp"
+        app:srcCompat="@drawable/ion_beer"
+        tools:layout_editor_absoluteY="-5dp"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintStart_toEndOf="@id/BeerButton"
+        app:layout_constraintTop_toTopOf="@id/myToolbar"
+        android:layout_marginVertical="16dp"
+        android:layout_marginStart="8.5dp"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:fontFamily="@font/quicksand_bold"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar"
+        android:src="@drawable/vector"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/none" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/welcome"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/pubs"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginVertical="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myToolbar"
+        android:backgroundTint="@color/white"
+        android:queryBackground="@android:color/transparent"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/GPS"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawableStart="@drawable/gps"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="218dp"
+        android:background="@android:color/transparent"
+        android:textAllCaps="false"
+      />
     <TextView
         android:id="@+id/top_title"
         android:layout_width="0dp"
@@ -17,10 +137,10 @@
         android:fontFamily="@font/quicksand_bold"
         android:text="@string/top_title"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button"
         app:layout_constraintBottom_toTopOf="@id/topRecyclerView"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -29,7 +149,7 @@
         android:layout_height="235dp"
         android:orientation="horizontal"
         android:layout_marginTop="20dp"
-        android:paddingLeft="6dp"
+        android:layout_marginStart="6dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="@id/top_title"
         app:layout_constraintStart_toStartOf="@id/top_title"
@@ -52,10 +172,6 @@
         app:layout_constraintTop_toBottomOf="@+id/topRecyclerView">
 
     </com.kingfisher.easyviewindicator.RecyclerViewIndicator>
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
