@@ -2,30 +2,32 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
 
     <ImageView
         android:id="@+id/card_rectangle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/rectangle_card_opinion"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/card_opinion"
+        app:layout_constraintEnd_toEndOf="@+id/card_opinion"
+        app:layout_constraintStart_toStartOf="@+id/card_opinion"
+        app:layout_constraintTop_toTopOf="@+id/card_opinion"
+        app:srcCompat="@drawable/rectangle_card_opinion" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card_opinion"
-        android:layout_width="328dp"
+        android:layout_width="wrap_content"
         android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rectangle_card_opinion"
         app:cardCornerRadius="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26">
 
 
         <ImageView
@@ -39,7 +41,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.71000004"
-            app:srcCompat="@drawable/star_card_opinion" />
+            app:srcCompat="@drawable/star_card_opinion"
+            tools:ignore="ImageContrastCheck" />
 
         <View
             android:id="@+id/opinion_ellipse"

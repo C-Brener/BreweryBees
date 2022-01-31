@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F7">
+
+
+    <TextView
+        android:id="@+id/top_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif"
+        android:text="Segundo a opinião dos usuários:"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contains_result_opinion"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:text="30 resultados"
+        app:layout_constraintStart_toStartOf="@+id/top_title"
+        app:layout_constraintTop_toBottomOf="@+id/top_title" />
+
+    <TextView
+        android:id="@+id/order_opinion"
+        android:layout_width="112dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:text="Ordenar por: Nota"
+        app:layout_constraintStart_toStartOf="@+id/contains_result_opinion"
+        app:layout_constraintTop_toBottomOf="@+id/contains_result_opinion" />
+
+    <ImageView
+        android:id="@+id/filter_icon_opinion"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/top_title"
+        app:layout_constraintTop_toTopOf="@+id/order_opinion"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size"
+        app:tint="#000000" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-81dp"
+        tools:layout_editor_absoluteY="67dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/topRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:paddingLeft="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.452"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="158dp"
+            tools:listitem="@layout/card_opinion_horizontal" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
