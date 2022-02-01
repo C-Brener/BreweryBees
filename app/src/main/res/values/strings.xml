@@ -11,5 +11,7 @@
     <string name="none" />
     <string name="search">Buscar cervejaria por cidade</string>
     <string name="GPS">Utilizar meu local</string>
+    <string name="IconBeer">Button Icon Beer</string>
+    <string name="ButtonFavorite">FavoriteButtonBeer</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
