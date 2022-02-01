@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ciandt.breweryees.Model.CervejariaModel
+import com.ciandt.breweryees.Model.cervejaria
 import com.ciandt.breweryees.R
 
 class CervejariaAdapter(val cervejarias : List<CervejariaModel>) : RecyclerView.Adapter<CervejariaViewHolder>() {
@@ -19,5 +20,7 @@ class CervejariaAdapter(val cervejarias : List<CervejariaModel>) : RecyclerView.
     }
 
     override fun getItemCount(): Int = cervejarias.size
+
+
 
 }
