@@ -129,50 +129,13 @@
         android:background="@android:color/transparent"
         android:textAllCaps="false"
       />
-    <TextView
-        android:id="@+id/top_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/quicksand_bold"
-        android:text="@string/top_title"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topWelcome"
-        app:layout_constraintBottom_toTopOf="@id/topRecyclerView"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/topRecyclerView"
-        android:layout_width="wrap_content"
-        android:layout_height="235dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="6dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toEndOf="@id/top_title"
-        app:layout_constraintStart_toStartOf="@id/top_title"
-        app:layout_constraintTop_toBottomOf="@id/top_title"
-
-        tools:listitem="@layout/top_item"
-        />
-
-    <com.kingfisher.easyviewindicator.RecyclerViewIndicator
-        android:id="@+id/recyclerViewIndicator"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mainFragment"
         android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_height="8dp"
-        app:avi_animation_enable="false"
-        app:avi_drawable="@drawable/black_radius"
-        app:avi_drawable_unselected="@drawable/gray_radius"
-        app:avi_height="8dp"
-        app:avi_margin="8dp"
-        app:avi_width="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/topRecyclerView">
-
-    </com.kingfisher.easyviewindicator.RecyclerViewIndicator>
-
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/topWelcome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:name="com.ciandt.breweryees.Top10Fragment"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

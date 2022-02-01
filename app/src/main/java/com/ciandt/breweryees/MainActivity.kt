@@ -2,11 +2,7 @@ package com.ciandt.breweryees
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.ciandt.breweryees.Model.fakeCervejaria
 import com.ciandt.breweryees.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -21,12 +17,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setActionBar(binding.myToolbar)
 
-        setupLinearRecyclerViewHorizontal()
+        //setupLinearRecyclerViewHorizontal()
     }
 
-    private fun setupLinearRecyclerViewHorizontal() {
+    /*private fun setupLinearRecyclerViewHorizontal() {
         topRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL,false)
         topRecyclerView.adapter = CervejariaAdapter(fakeCervejaria())
         recyclerViewIndicator.setRecyclerView(topRecyclerView)
-    }
+    }*/
 }
