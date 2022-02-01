@@ -9,8 +9,9 @@
         <entry key="app/src/main/res/layout/activity_list_opinion_users.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_user_opinion.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/card_opinion_horizontal.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/card_opinion_horizontal.xml" value="0.5318818040435459" />
         <entry key="app/src/main/res/layout/content_list_opinion_users.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/result_opinion_user.xml" value="0.5318818040435459" />
       </map>
     </option>
   </component>
@@ -20,7 +21,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.5" />
+        <option name="scale" value="0.5318818040435459" />
       </ProjectState>
     </option>
   </component>

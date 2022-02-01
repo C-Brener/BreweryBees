@@ -51,25 +51,17 @@
         app:srcCompat="@android:drawable/ic_menu_sort_by_size"
         app:tint="#000000" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-81dp"
-        tools:layout_editor_absoluteY="67dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="6dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/top_title"
+        app:layout_constraintStart_toStartOf="@+id/order_opinion"
+        app:layout_constraintTop_toBottomOf="@+id/order_opinion"
+        tools:listitem="@layout/card_opinion_horizontal" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/topRecyclerView"
-            android:layout_width="0dp"
-            android:layout_height="500dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:orientation="vertical"
-            android:paddingLeft="6dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.452"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="158dp"
-            tools:listitem="@layout/card_opinion_horizontal" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
