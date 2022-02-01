@@ -10,10 +10,10 @@ class BeerRepository {
 //            CervejariaModel()
 //        )
 
-        return fakeCervejaria()
+        return fakeCervejaria1()
     }
 
-    fun fakeCervejaria():MutableList<CervejariaModel> = mutableListOf(
+    fun fakeCervejaria1():MutableList<CervejariaModel> = mutableListOf(
         cervejaria {
             name = "Bar do Detomi"
             rating = 4.9.toFloat()

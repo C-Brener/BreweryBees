@@ -13,4 +13,5 @@ class CervejariaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         itemView.top_item_type.text = "Tipo"
         itemView.top_item_distance.text = "${cervejaria.distance} km"
     }
+
 }

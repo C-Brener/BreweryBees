@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.ciandt.breweryees.Model.fakeCervejaria
 import com.ciandt.breweryees.databinding.FragmentTop10Binding
 import kotlinx.android.synthetic.main.fragment_top10.*
 
@@ -26,7 +27,7 @@ class Top10Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //topRecyclerView.adapter = CervejariaAdapter(fakeCervejaria())
+        topRecyclerView.adapter = CervejariaAdapter(fakeCervejaria())
         //setupListeners()
         recyclerViewIndicator.setRecyclerView(topRecyclerView)
     }
