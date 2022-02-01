@@ -11,7 +11,7 @@
     <Toolbar
         android:navigationIcon="@drawable/ion_beer"
         android:title="@string/app_name"
-        android:titleTextColor="@color/yellow"
+        android:titleTextColor="@color/yellow_bees"
         android:contentInsetEndWithActions="0dp"
         android:id="@+id/my_toolbar"
         android:layout_width="0dp"
