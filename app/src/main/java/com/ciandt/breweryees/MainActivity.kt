@@ -1,15 +1,28 @@
 package com.ciandt.breweryees
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import com.ciandt.breweryees.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding : ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        Thread.sleep(2000)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setActionBar(findViewById(R.id.my_toolbar))
+
+        binding = ActivityMainBinding.inflate(layoutInflater, null, false)
+
+        setContentView(binding.root)
+        setActionBar(binding.myToolbar)
+
+        //setupLinearRecyclerViewHorizontal()
     }
 
+    /*private fun setupLinearRecyclerViewHorizontal() {
+        topRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL,false)
+        topRecyclerView.adapter = CervejariaAdapter(fakeCervejaria())
+        recyclerViewIndicator.setRecyclerView(topRecyclerView)
+    }*/
 }
-
