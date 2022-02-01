@@ -24,22 +24,20 @@
         app:cardCornerRadius="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26">
+        app:layout_constraintVertical_bias="1.0">
 
 
         <ImageView
             android:id="@+id/opinion_star"
-            android:layout_width="14dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:layout_marginEnd="250dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.71000004"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@+id/opinion_ellipse"
+            app:layout_constraintTop_toBottomOf="@+id/bar_name"
             app:srcCompat="@drawable/star_card_opinion"
             tools:ignore="ImageContrastCheck" />
 
@@ -80,44 +78,36 @@
             android:id="@+id/opinion_note"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
-            android:layout_marginStart="84dp"
-            android:layout_marginEnd="225dp"
+            android:layout_marginStart="4dp"
             android:text="4,9"
             android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.74" />
+            app:layout_constraintBottom_toBottomOf="@+id/opinion_star"
+            app:layout_constraintStart_toEndOf="@+id/opinion_star"
+            app:layout_constraintTop_toTopOf="@+id/opinion_star" />
 
         <TextView
             android:id="@+id/opinion_distance"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
-            android:layout_marginStart="177dp"
-            android:layout_marginEnd="110dp"
+            android:layout_marginStart="99dp"
+            android:layout_marginTop="4dp"
             android:text="0,9km"
             android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.74" />
+            app:layout_constraintBottom_toBottomOf="@+id/opinion_star"
+            app:layout_constraintStart_toEndOf="@+id/opinion_star"
+            app:layout_constraintTop_toBottomOf="@+id/bar_name" />
 
         <TextView
             android:id="@+id/opinion_type"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
-            android:layout_marginStart="125dp"
-            android:layout_marginEnd="173dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="4dp"
             android:text="Tipo"
             android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.74" />
+            app:layout_constraintBottom_toBottomOf="@+id/opinion_star"
+            app:layout_constraintStart_toEndOf="@+id/opinion_star"
+            app:layout_constraintTop_toBottomOf="@+id/bar_name" />
 
         <TextView
             android:id="@+id/bar_name"
@@ -135,52 +125,41 @@
 
         <ImageView
             android:id="@+id/ellipse_small"
-            android:layout_width="6dp"
-            android:layout_height="6dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="211dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/opinion_note"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.71000004"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/opinion_star"
+            app:layout_constraintTop_toBottomOf="@+id/bar_name"
             app:srcCompat="@drawable/ellipse_small" />
 
         <ImageView
             android:id="@+id/ellipse_small2"
             android:layout_width="6dp"
             android:layout_height="6dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="159dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/opinion_type"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.71000004"
+            android:layout_marginStart="85dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ellipse_small"
+            app:layout_constraintStart_toEndOf="@+id/opinion_star"
+            app:layout_constraintTop_toTopOf="@+id/ellipse_small"
             app:srcCompat="@drawable/ellipse_small" />
 
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="18dp"
             android:layout_height="19.91dp"
-            android:layout_marginStart="267dp"
-            android:layout_marginEnd="43dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/share_card_opinion" />
+            android:layout_marginStart="211dp"
+            app:layout_constraintStart_toEndOf="@+id/opinion_ellipse"
+            app:srcCompat="@drawable/share_card_opinion"
+            tools:layout_editor_absoluteY="21dp" />
 
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="20dp"
             android:layout_height="18.35dp"
-            android:layout_marginStart="298dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="@+id/imageButton"
             app:srcCompat="@drawable/heart_card_opinion" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
