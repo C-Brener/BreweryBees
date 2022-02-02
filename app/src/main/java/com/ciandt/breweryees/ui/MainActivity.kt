@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater, null, false)
 
         setContentView(binding.root)
-        setActionBar(binding.myToolbar)
+        setSupportActionBar(binding.myToolbar)
 
         //setupLinearRecyclerViewHorizontal()
     }
