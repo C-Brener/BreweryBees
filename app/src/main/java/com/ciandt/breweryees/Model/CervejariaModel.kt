@@ -16,10 +16,12 @@ class CervejariaBuilder{
 
     fun build() : CervejariaModel = CervejariaModel(name,rating,type,distance)
 }
+
 fun cervejaria(block: CervejariaBuilder.()->Unit): CervejariaModel = CervejariaBuilder().apply(block).build()
+
 fun fakeCervejaria():MutableList<CervejariaModel> = mutableListOf(
     cervejaria {
-        name = "Bar do Detoni"
+        name = "Bar do Detomi"
         rating = 4.9.toFloat()
         type = "Bar"
         distance = "2.5"

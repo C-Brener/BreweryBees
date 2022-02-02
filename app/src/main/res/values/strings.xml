@@ -6,4 +6,12 @@
     <string name="km">0,9km</string>
     <string name="rating">5.0</string>
     <string name="type">Tipo</string>
+    <string name="welcome">Bem-vindo(a)!</string>
+    <string name="pubs">Encontre as melhores cervejarias</string>
+    <string name="none" />
+    <string name="search">Buscar cervejaria por cidade</string>
+    <string name="GPS">Utilizar meu local</string>
+    <string name="IconBeer">Button Icon Beer</string>
+    <string name="ButtonFavorite">FavoriteButtonBeer</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>
