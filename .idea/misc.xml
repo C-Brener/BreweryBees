@@ -6,14 +6,16 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.16041666666666668" />
         <entry key="app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.16041666666666668" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.16041666666666668" />
-        <entry key="app/src/main/res/drawable/ion_beer.xml" value="0.2" />
         <entry key="app/src/main/res/layout-large/activity_main.xml" value="0.10450819672131148" />
         <entry key="app/src/main/res/layout-normal/activity_main.xml" value="0.13858695652173914" />
         <entry key="app/src/main/res/layout-small/activity_main.xml" value="0.13858695652173914" />
-        <entry key="app/src/main/res/layout-v23/activity_main.xml" value="0.19114583333333332" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4009216589861751" />
-        <entry key="app/src/main/res/layout/fragment_top10.xml" value="0.2727272727272727" />
-        <entry key="app/src/main/res/layout/top_item.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_error_results.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_error_search.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_search_error.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/fragment_error_search.xml" value="0.16927083333333334" />
+        <entry key="app/src/main/res/layout/fragment_top10.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/top_item.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.33" />
       </map>
     </option>
@@ -23,12 +25,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.1" />
-      </ProjectState>
-    </option>
   </component>
 </project>
