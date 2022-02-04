@@ -18,8 +18,8 @@ class Top10ViewModel(): ViewModel(
     val bearListLiveData :LiveData<BreweriesModel>
     get() = _bearListLiveData
 
-    fun getBeerList(){
-       //val response =  beerRepository.getBeer()
+    suspend fun getBeerList(){
+       val response =  beerRepository.getBreweriesTopTen()
         //if sucesso
         //_bearListLiveData.postValue(response)//response.data
     }

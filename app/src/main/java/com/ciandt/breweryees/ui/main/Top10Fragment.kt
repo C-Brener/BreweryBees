@@ -32,6 +32,7 @@ class Top10Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         retrieveRespositories()
+        //setupListeners()
 
         recyclerViewIndicator.setRecyclerView(topRecyclerView)
     }
@@ -52,7 +53,6 @@ class Top10Fragment : Fragment() {
             topRecyclerView.adapter = BreweriesAdapter(resultList)
         }
     }
-
 
     fun setupListeners(){
         viewModel.bearListLiveData.observe(viewLifecycleOwner) { beerList ->
