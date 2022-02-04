@@ -11,16 +11,9 @@ import com.ciandt.breweryees.databinding.FragmentCardResultBinding
 import com.ciandt.breweryees.databinding.FragmentTop10Binding
 import kotlinx.android.synthetic.main.fragment_top10.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CardResultFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CardResultFragment : Fragment() {
     private var _binding : FragmentCardResultBinding? = null
     private val binding get() = _binding!!
@@ -43,11 +36,6 @@ class CardResultFragment : Fragment() {
         recyclerViewIndicator.setRecyclerView(topRecyclerView)
     }
 
-    fun setupListeners(){
-        viewModel.bearListLiveData.observe(viewLifecycleOwner) { beerList ->
-            CervejariaAdapter(beerList)
-        }
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
