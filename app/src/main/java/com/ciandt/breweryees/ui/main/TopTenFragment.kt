@@ -6,18 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.ciandt.breweryees.Model.BreweriesModel
-import com.ciandt.breweryees.databinding.FragmentTop10Binding
+import com.ciandt.breweryees.databinding.FragmentTopTenBinding
+
 import com.ciandt.breweryees.repository.BreweriesRepository
-import kotlinx.android.synthetic.main.fragment_top10.*
+import kotlinx.android.synthetic.main.fragment_top_ten.*
 import kotlinx.coroutines.*
-import retrofit2.Response
 
-class Top10Fragment : Fragment() {
+class TopTenFragment : Fragment() {
 
-    private var _binding : FragmentTop10Binding? = null
+    private var _binding : FragmentTopTenBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: Top10ViewModel
+    private lateinit var viewModel: TopTenViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +24,7 @@ class Top10Fragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentTop10Binding.inflate(inflater,container,false)
+        _binding = FragmentTopTenBinding.inflate(inflater,container,false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -50,7 +49,7 @@ class Top10Fragment : Fragment() {
         val coroutineScope = CoroutineScope(top10FragmentJob + Dispatchers.Main)
         coroutineScope.launch (errorHandler) {
             val resultList = BreweriesRepository().getBreweriesTopTen()
-            topRecyclerView.adapter = BreweriesAdapter(resultList)
+            topRecyclerView.adapter = TopTenAdapter(resultList)
         }
     }
 
