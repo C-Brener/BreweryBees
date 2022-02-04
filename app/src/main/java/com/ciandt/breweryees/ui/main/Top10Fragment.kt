@@ -1,13 +1,17 @@
 package com.ciandt.breweryees.ui.main
 
+import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ciandt.breweryees.Model.fakeCervejaria
+import androidx.fragment.app.Fragment
+import com.ciandt.breweryees.Model.BreweriesModel
 import com.ciandt.breweryees.databinding.FragmentTop10Binding
+import com.ciandt.breweryees.repository.BreweriesRepository
 import kotlinx.android.synthetic.main.fragment_top10.*
+import kotlinx.coroutines.*
+import retrofit2.Response
 
 class Top10Fragment : Fragment() {
 
@@ -27,14 +31,32 @@ class Top10Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        topRecyclerView.adapter = CervejariaAdapter(fakeCervejaria())
-        //setupListeners()
+        retrieveRespositories()
+
         recyclerViewIndicator.setRecyclerView(topRecyclerView)
     }
 
+    fun retrieveRespositories(){
+        val top10FragmentJob : CompletableJob = Job()
+
+        val errorHandler : CoroutineExceptionHandler = CoroutineExceptionHandler{ _, exception ->
+            AlertDialog.Builder(context).setTitle("Error")
+                .setMessage(exception.message)
+                .setPositiveButton(android.R.string.ok) { _, _ -> }
+                .setIcon(android.R.drawable.ic_dialog_alert).show()
+        }
+
+        val coroutineScope = CoroutineScope(top10FragmentJob + Dispatchers.Main)
+        coroutineScope.launch (errorHandler) {
+            val resultList = BreweriesRepository().getBreweriesTopTen()
+            topRecyclerView.adapter = BreweriesAdapter(resultList)
+        }
+    }
+
+
     fun setupListeners(){
         viewModel.bearListLiveData.observe(viewLifecycleOwner) { beerList ->
-            CervejariaAdapter(beerList)
+            //BreweriesAdapter(beerList)
         }
     }
 
