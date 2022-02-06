@@ -27,17 +27,17 @@ class TopTenFragment : Fragment() {
         _binding = FragmentTopTenBinding.inflate(inflater,container,false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         retrieveRespositories()
-        //setupListeners()
 
-        recyclerViewIndicator.setRecyclerView(topRecyclerView)
+        topTenViewIndicator.setRecyclerView(topTenRecyclerView)
     }
 
-    fun retrieveRespositories(){
-        val top10FragmentJob : CompletableJob = Job()
+    private fun retrieveRespositories(){
+        val topTenFragmentJob : CompletableJob = Job()
 
         val errorHandler : CoroutineExceptionHandler = CoroutineExceptionHandler{ _, exception ->
             AlertDialog.Builder(context).setTitle("Error")
@@ -46,16 +46,10 @@ class TopTenFragment : Fragment() {
                 .setIcon(android.R.drawable.ic_dialog_alert).show()
         }
 
-        val coroutineScope = CoroutineScope(top10FragmentJob + Dispatchers.Main)
+        val coroutineScope = CoroutineScope(topTenFragmentJob + Dispatchers.Main)
         coroutineScope.launch (errorHandler) {
             val resultList = BreweriesRepository().getBreweriesTopTen()
-            topRecyclerView.adapter = TopTenAdapter(resultList)
-        }
-    }
-
-    fun setupListeners(){
-        viewModel.bearListLiveData.observe(viewLifecycleOwner) { beerList ->
-            //BreweriesAdapter(beerList)
+            topTenRecyclerView.adapter = TopTenAdapter(resultList)
         }
     }
 

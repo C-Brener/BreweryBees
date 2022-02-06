@@ -1,10 +1,9 @@
 package com.ciandt.breweryees.repository
 
+import android.R
 import com.ciandt.breweryees.Model.BreweriesModel
-import com.ciandt.breweryees.Model.BreweriesResult
+import com.ciandt.breweryees.Model.BreweriesPhotoModel
 import com.ciandt.breweryees.api.BreweriesService
-import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -28,7 +27,7 @@ class BreweriesRepository {
         return service.breweriesTopTen()
     }
 
-    suspend fun getBreweries(search:String): List<BreweriesModel>{
-        return service.breweries(search)
+    suspend fun getBreweriesPhotos(search :String): List<BreweriesPhotoModel>{
+        return service.breweriesPhotos(search)
     }
 }

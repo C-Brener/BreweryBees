@@ -1,6 +1,5 @@
 package com.ciandt.breweryees.Model
 
-data class BreweriesResult(val breweriesModel: List<BreweriesModel>)
 data class BreweriesModel(
     var id:String? = null,
     var name: String? = null,

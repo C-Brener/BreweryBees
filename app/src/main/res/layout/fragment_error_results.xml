@@ -21,13 +21,15 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/quicksand_bold"
             android:gravity="center_horizontal|top"
             android:text="@string/no_results"
             android:textColor="@color/black"
             android:textSize="20sp"
-            tools:layout_editor_absoluteX="51dp"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/try_again"
@@ -35,9 +37,10 @@
             android:layout_height="62dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_constraintTop_toBottomOf="@error_results"
             android:layout_gravity="center"
             android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="77dp"
             android:fontFamily="@font/quicksand_regular"
             android:gravity="center_horizontal|top"
             android:lineSpacingExtra="6sp"
@@ -45,7 +48,9 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:translationY="-3sp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="101dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/error_results" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

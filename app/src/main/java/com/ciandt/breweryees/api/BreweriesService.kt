@@ -1,10 +1,11 @@
 package com.ciandt.breweryees.api
 
 import com.ciandt.breweryees.Model.BreweriesModel
-import com.ciandt.breweryees.Model.BreweriesResult
-import retrofit2.Call
+import com.ciandt.breweryees.Model.BreweriesPhotoModel
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
+
 
 interface BreweriesService {
 
@@ -14,7 +15,7 @@ interface BreweriesService {
     @GET("/breweries/topTen")
     suspend fun breweriesTopTen():List<BreweriesModel>
 
-    @GET("/breweries/photos")
-    suspend fun breweriesPhotos():List<BreweriesModel>
+    @GET("/breweries/photos/{breweryId}")
+    suspend fun breweriesPhotos(@Path(value = "breweryId", encoded = true) by_city : String):List<BreweriesPhotoModel>
 
 }

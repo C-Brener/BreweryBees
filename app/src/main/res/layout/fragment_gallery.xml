@@ -35,7 +35,7 @@
         tools:listitem="@layout/gallery_item" />
 
     <com.kingfisher.easyviewindicator.RecyclerViewIndicator
-        android:id="@+id/recyclerViewIndicator"
+        android:id="@+id/galleryViewIndicator"
         android:layout_width="match_parent"
         android:layout_marginTop="16dp"
         android:layout_height="8dp"

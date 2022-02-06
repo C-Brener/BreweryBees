@@ -26,5 +26,13 @@
             app:layout_constraintTop_toTopOf="@id/gallery_item"
             app:srcCompat="@drawable/bar" />
 
+        <TextView
+            android:id="@+id/galleryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
