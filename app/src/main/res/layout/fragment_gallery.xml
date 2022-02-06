@@ -16,6 +16,7 @@
         android:fontFamily="@font/quicksand_regular"
         android:text="@string/title_gallery"
         android:textSize="14sp"
+        android:textFontWeight="300"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +25,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/galleryRecyclerView"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="88dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
@@ -48,5 +49,31 @@
         app:layout_constraintTop_toBottomOf="@+id/galleryRecyclerView">
 
     </com.kingfisher.easyviewindicator.RecyclerViewIndicator>
+
+    <ImageView
+        android:id="@+id/gallery_item_btnAdd"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/btn_add_img"
+        app:layout_constraintEnd_toEndOf="@+id/galleryViewIndicator"
+        app:layout_constraintStart_toStartOf="@+id/galleryViewIndicator"
+        app:layout_constraintTop_toBottomOf="@+id/galleryViewIndicator" />
+
+    <TextView
+        android:id="@+id/gallery_item_txtAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_photo"
+        android:fontFamily="@font/quicksand_regular"
+        android:textSize="16sp"
+        android:lineHeight="26dp"
+        android:textFontWeight="500"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/gallery_item_btnAdd"
+        app:layout_constraintEnd_toEndOf="@+id/gallery_item_btnAdd"
+        app:layout_constraintStart_toStartOf="@id/gallery_item_btnAdd"
+        app:layout_constraintTop_toTopOf="@+id/gallery_item_btnAdd" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
