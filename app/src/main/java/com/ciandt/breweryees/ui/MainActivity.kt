@@ -2,6 +2,7 @@ package com.ciandt.breweryees.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import com.ciandt.breweryees.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,13 +17,9 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
         setSupportActionBar(binding.myToolbar)
-
-        //setupLinearRecyclerViewHorizontal()
     }
 
-    /*private fun setupLinearRecyclerViewHorizontal() {
-        topRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL,false)
-        topRecyclerView.adapter = CervejariaAdapter(fakeCervejaria())
-        recyclerViewIndicator.setRecyclerView(topRecyclerView)
-    }*/
+
 }
+
+
