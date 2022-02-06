@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="140dp"
     android:layout_height="234dp"
@@ -17,9 +18,8 @@
             android:id="@+id/top_item_logo"
             android:layout_width="0dp"
             android:layout_height="120dp"
-            android:alpha="0.3"
             android:contentDescription="@string/logo_brewery"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="@id/top_item"
             app:layout_constraintStart_toStartOf="@id/top_item"
             app:layout_constraintTop_toTopOf="@id/top_item"
