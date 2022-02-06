@@ -3,7 +3,6 @@ package com.ciandt.breweryees.ui.main
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ciandt.breweryees.Model.BreweriesModel
 import com.ciandt.breweryees.Model.BreweriesPhotoModel
 import com.ciandt.breweryees.R
 

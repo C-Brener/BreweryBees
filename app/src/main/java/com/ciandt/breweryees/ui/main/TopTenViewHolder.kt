@@ -4,6 +4,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.ciandt.breweryees.Model.BreweriesModel
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_gallery.view.*
 import kotlinx.android.synthetic.main.top_ten_item.view.*
 
 class TopTenViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

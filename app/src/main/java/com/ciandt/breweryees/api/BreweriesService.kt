@@ -10,7 +10,10 @@ import retrofit2.http.Query
 interface BreweriesService {
 
     @GET("/breweries")
-    suspend fun breweries(@Query(value = "by_city",encoded = true) by_city : String) : List<BreweriesModel>
+    suspend fun breweriesCity(@Query(value = "by_city",encoded = true) by_city : String)
+
+    @GET("/breweries/{breweryId}")
+    suspend fun breweriesId(@Path(value = "breweryId",encoded = true) breweryId : String) : List<BreweriesModel>
 
     @GET("/breweries/topTen")
     suspend fun breweriesTopTen():List<BreweriesModel>

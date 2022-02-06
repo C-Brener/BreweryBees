@@ -2,6 +2,7 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topTen_card"
     android:layout_width="140dp"
     android:layout_height="234dp"
     android:layout_marginLeft="6dp"
