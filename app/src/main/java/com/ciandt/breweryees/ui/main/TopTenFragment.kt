@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.ciandt.breweryees.databinding.FragmentTopTenBinding
 
@@ -17,14 +16,9 @@ class TopTenFragment : Fragment() {
 
     private var _binding : FragmentTopTenBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: TopTenViewModel
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentTopTenBinding.inflate(inflater,container,false)
         return binding.root
     }
@@ -32,15 +26,15 @@ class TopTenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        retrieveRespositories()
+        topTenRepositories()
 
         topTenViewIndicator.setRecyclerView(topTenRecyclerView)
     }
 
-    private fun retrieveRespositories(){
+    private fun topTenRepositories(){
         val topTenFragmentJob : CompletableJob = Job()
 
-        val errorHandler : CoroutineExceptionHandler = CoroutineExceptionHandler{ _, exception ->
+        val errorHandler = CoroutineExceptionHandler{ _, exception ->
             AlertDialog.Builder(context).setTitle("Error")
                 .setMessage(exception.message)
                 .setPositiveButton(android.R.string.ok) { _, _ -> }

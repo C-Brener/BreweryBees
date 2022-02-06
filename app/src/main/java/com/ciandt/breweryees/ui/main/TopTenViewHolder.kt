@@ -4,7 +4,6 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.ciandt.breweryees.Model.BreweriesModel
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_gallery.view.*
 import kotlinx.android.synthetic.main.top_ten_item.view.*
 
 class TopTenViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -14,11 +13,10 @@ class TopTenViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         top_item_rating.text = breweries.average.toString()
         top_item_distance.text = breweries.country
 
-        val picaso = Picasso.get()
-        picaso.load(imgfake)
-            .resize(140, 120)
-            .centerCrop()
-            .into(top_item_logo)
+        Picasso.get().load(imgfake)
+        .resize(140, 120)
+        .centerCrop()
+        .into(top_item_logo)
 
     }
 }

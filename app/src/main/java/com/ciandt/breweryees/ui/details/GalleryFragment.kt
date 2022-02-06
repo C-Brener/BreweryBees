@@ -15,19 +15,12 @@ import kotlinx.coroutines.*
 class GalleryFragment : Fragment() {
 
     private var _binding : FragmentGalleryBinding? = null
-    private val binding get() = _binding!!
-    //private lateinit var viewModel: TopTenViewModel
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    //private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_gallery, container, false)
     }
 
@@ -36,13 +29,14 @@ class GalleryFragment : Fragment() {
 
         val bundle = arguments
 
-        var breweriesId  = bundle?.getString("breweries_id").toString()
-        galleryRespositories(breweriesId)
+        bundle?.getString("breweries_id").toString().apply {
+            galleryRepositories(this)
+        }
 
         galleryViewIndicator.setRecyclerView(galleryRecyclerView)
     }
 
-    private fun galleryRespositories(breweriesId:String){
+    private fun galleryRepositories(breweriesId:String){
         val galleryFragmentJob : CompletableJob = Job()
 
         val errorHandler  = CoroutineExceptionHandler{ _, exception ->
