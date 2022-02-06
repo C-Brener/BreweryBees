@@ -6,11 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.FragmentGalleryBinding
 import com.ciandt.breweryees.repository.BreweriesRepository
 import kotlinx.android.synthetic.main.fragment_gallery.*
 import kotlinx.coroutines.*
+
 
 class GalleryFragment : Fragment() {
 
@@ -32,8 +35,6 @@ class GalleryFragment : Fragment() {
         bundle?.getString("breweries_id").toString().apply {
             galleryRepositories(this)
         }
-
-        galleryViewIndicator.setRecyclerView(galleryRecyclerView)
     }
 
     private fun galleryRepositories(breweriesId:String){
@@ -50,6 +51,7 @@ class GalleryFragment : Fragment() {
         coroutineScope.launch (errorHandler) {
             val resultList = BreweriesRepository().getBreweriesPhotos(breweriesId)
             galleryRecyclerView.adapter = GalleryAdapter(resultList)
+            galleryViewIndicator.setRecyclerView(galleryRecyclerView)
         }
     }
 

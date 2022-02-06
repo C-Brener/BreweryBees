@@ -28,8 +28,8 @@ class TopTenFragment : Fragment() {
 
         topTenRepositories()
 
-        topTenViewIndicator.setRecyclerView(topTenRecyclerView)
     }
+
 
     private fun topTenRepositories(){
         val topTenFragmentJob : CompletableJob = Job()
@@ -45,6 +45,7 @@ class TopTenFragment : Fragment() {
         coroutineScope.launch (errorHandler) {
             val resultList = BreweriesRepository().getBreweriesTopTen()
             topTenRecyclerView.adapter = TopTenAdapter(resultList)
+            topTenViewIndicator.setRecyclerView(topTenRecyclerView)
         }
     }
 

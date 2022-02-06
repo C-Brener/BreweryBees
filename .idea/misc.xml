@@ -16,11 +16,11 @@
         <entry key="app/src/main/res/layout/activity_error_search.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_search_error.xml" value="0.12681159420289856" />
-        <entry key="app/src/main/res/layout/fragment_error_results.xml" value="0.12907608695652173" />
+        <entry key="app/src/main/res/layout/fragment_error_results.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_error_search.xml" value="0.16927083333333334" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.27314814814814814" />
         <entry key="app/src/main/res/layout/fragment_top10.xml" value="0.12681159420289856" />
-        <entry key="app/src/main/res/layout/fragment_top_ten.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/fragment_top_ten.xml" value="0.1" />
         <entry key="app/src/main/res/layout/gallery_item.xml" value="0.18" />
         <entry key="app/src/main/res/layout/top_item.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/top_ten_item.xml" value="0.20416666666666666" />
