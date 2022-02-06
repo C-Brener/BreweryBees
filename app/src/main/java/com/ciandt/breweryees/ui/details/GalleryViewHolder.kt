@@ -1,4 +1,4 @@
-package com.ciandt.breweryees.ui.main
+package com.ciandt.breweryees.ui.details
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

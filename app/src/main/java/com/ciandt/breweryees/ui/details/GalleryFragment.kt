@@ -1,17 +1,15 @@
-package com.ciandt.breweryees.ui.main
+package com.ciandt.breweryees.ui.details
 
 import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.FragmentGalleryBinding
-import com.ciandt.breweryees.databinding.FragmentTopTenBinding
 import com.ciandt.breweryees.repository.BreweriesRepository
 import kotlinx.android.synthetic.main.fragment_gallery.*
-import kotlinx.android.synthetic.main.fragment_top_ten.*
 import kotlinx.coroutines.*
 
 class GalleryFragment : Fragment() {
@@ -36,15 +34,18 @@ class GalleryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        retrieveRespositories()
+        val bundle = arguments
+
+        var breweriesId  = bundle?.getString("breweries_id").toString()
+        galleryRespositories(breweriesId)
 
         galleryViewIndicator.setRecyclerView(galleryRecyclerView)
     }
 
-    private fun retrieveRespositories(){
+    private fun galleryRespositories(breweriesId:String){
         val galleryFragmentJob : CompletableJob = Job()
 
-        val errorHandler : CoroutineExceptionHandler = CoroutineExceptionHandler{ _, exception ->
+        val errorHandler  = CoroutineExceptionHandler{ _, exception ->
             AlertDialog.Builder(context).setTitle("Error")
                 .setMessage(exception.message)
                 .setPositiveButton(android.R.string.ok) { _, _ -> }
@@ -53,7 +54,7 @@ class GalleryFragment : Fragment() {
 
         val coroutineScope = CoroutineScope(galleryFragmentJob + Dispatchers.Main)
         coroutineScope.launch (errorHandler) {
-            val resultList = BreweriesRepository().getBreweriesPhotos("alphabet-city-brewing-co-new-york")
+            val resultList = BreweriesRepository().getBreweriesPhotos(breweriesId)
             galleryRecyclerView.adapter = GalleryAdapter(resultList)
         }
     }

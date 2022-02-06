@@ -4,11 +4,11 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
+
 import androidx.recyclerview.widget.RecyclerView
 import com.ciandt.breweryees.Model.BreweriesModel
 import com.ciandt.breweryees.R
-import kotlinx.android.synthetic.main.fragment_gallery.*
+import com.ciandt.breweryees.ui.DetailsActivity
 
 
 class TopTenAdapter(private val breweriesList: List<BreweriesModel>) : RecyclerView.Adapter<TopTenViewHolder>() {
@@ -24,9 +24,13 @@ class TopTenAdapter(private val breweriesList: List<BreweriesModel>) : RecyclerV
 
         holderTopTen.itemView.setOnClickListener{view ->
             Toast.makeText(view.context, breweriesList[position].id,Toast.LENGTH_LONG).show()
-            val intent= Intent(view.context,GalleryFragment::class.java)
+
+            val intent = Intent(view.context, DetailsActivity::class.java)
+            intent.putExtra("breweries_id",breweriesList[position].id)
+            view.context.startActivity(intent)
         }
     }
+
 
     override fun getItemCount(): Int = breweriesList.size
 
