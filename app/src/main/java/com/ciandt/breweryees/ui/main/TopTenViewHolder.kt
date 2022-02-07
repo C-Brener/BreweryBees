@@ -17,6 +17,5 @@ class TopTenViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         .resize(140, 120)
         .centerCrop()
         .into(top_item_logo)
-
     }
 }

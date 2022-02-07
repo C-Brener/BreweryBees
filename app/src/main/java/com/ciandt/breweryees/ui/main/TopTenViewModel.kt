@@ -1,23 +1,35 @@
 package com.ciandt.breweryees.ui.main
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.ciandt.breweryees.Model.BreweriesModel
 import com.ciandt.breweryees.repository.BreweriesRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
-class TopTenViewModel(): ViewModel() {
-    private val beerRepository = BreweriesRepository()
-    private val _bearListLiveData = MutableLiveData<BreweriesModel>()
-    val bearListLiveData :LiveData<BreweriesModel>
-    get() = _bearListLiveData
+class TopTenViewModel(private val repository: BreweriesRepository): ViewModel() {
+    private val breweriesRepository = BreweriesRepository()
+    private val _topTenListLiveData = MutableLiveData<List<BreweriesModel>>()
+    val topTenListLiveData = _topTenListLiveData
 
-    suspend fun getBeerList(){
+    fun getTopTenList(){
 
-       val response =  beerRepository.getBreweriesTopTen()
-        //if sucesso
-        //_bearListLiveData.postValue(response)//response.data
+        CoroutineScope(Dispatchers.Main).launch {
+            val topTen = withContext(Dispatchers.Default) {
+                breweriesRepository.getBreweriesTopTen()
+            }
+            topTenListLiveData.value = topTen
+        }
     }
 
-
+    class TopTenFragmentFactory(
+        private val repository: BreweriesRepository
+    ):ViewModelProvider.Factory{
+        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+            return TopTenViewModel(repository) as T
+        }
+    }
 }

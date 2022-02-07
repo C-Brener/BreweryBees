@@ -24,6 +24,7 @@ class BreweriesRepository {
     }
 
     suspend fun getBreweriesTopTen() : List<BreweriesModel>{
+
         return service.breweriesTopTen()
     }
 

@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.ciandt.breweryees.databinding.FragmentTopTenBinding
 
 import com.ciandt.breweryees.repository.BreweriesRepository
@@ -16,6 +18,7 @@ class TopTenFragment : Fragment() {
 
     private var _binding : FragmentTopTenBinding? = null
     private val binding get() = _binding!!
+    private lateinit var viewModel: TopTenViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
@@ -26,27 +29,14 @@ class TopTenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        topTenRepositories()
+        viewModel = ViewModelProvider(this, TopTenViewModel.TopTenFragmentFactory(BreweriesRepository())).get(TopTenViewModel::class.java)
 
-    }
-
-
-    private fun topTenRepositories(){
-        val topTenFragmentJob : CompletableJob = Job()
-
-        val errorHandler = CoroutineExceptionHandler{ _, exception ->
-            AlertDialog.Builder(context).setTitle("Error")
-                .setMessage(exception.message)
-                .setPositiveButton(android.R.string.ok) { _, _ -> }
-                .setIcon(android.R.drawable.ic_dialog_alert).show()
-        }
-
-        val coroutineScope = CoroutineScope(topTenFragmentJob + Dispatchers.Main)
-        coroutineScope.launch (errorHandler) {
-            val resultList = BreweriesRepository().getBreweriesTopTen()
-            topTenRecyclerView.adapter = TopTenAdapter(resultList)
+        viewModel.topTenListLiveData.observe(viewLifecycleOwner){topTenList ->
+            topTenRecyclerView.adapter = TopTenAdapter(topTenList)
             topTenViewIndicator.setRecyclerView(topTenRecyclerView)
         }
+
+        viewModel.getTopTenList()
     }
 
     override fun onDestroyView() {
