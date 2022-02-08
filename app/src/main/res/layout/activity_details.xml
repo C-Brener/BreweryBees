@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="15dp"
+    app:cardCornerRadius="15dp"
+    android:background="@color/white"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/details_opinion_ellipse"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ellipse_opinion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/details_opinion_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:lineSpacingExtra="0sp"
+            android:text="A"
+            android:textAlignment="center"
+            android:textColor="#827717"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@+id/details_opinion_ellipse"
+            app:layout_constraintEnd_toEndOf="@+id/details_opinion_ellipse"
+            app:layout_constraintStart_toStartOf="@+id/details_opinion_ellipse"
+            app:layout_constraintTop_toTopOf="@+id/details_opinion_ellipse" />
+
+        <TextView
+            android:id="@+id/details_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/top_item_title"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/details_opinion_ellipse"
+            app:layout_constraintTop_toTopOf="@+id/details_opinion_ellipse" />
+
+        <TextView
+            android:id="@+id/details_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/quicksand_regular"
+            android:text="@string/type"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/details_opinion_ellipse"
+            app:layout_constraintTop_toBottomOf="@+id/details_item_name" />
+
+        <TextView
+            android:id="@+id/details_item_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/quicksand_regular"
+            android:text="@string/rating"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/details_item_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RatingBar
+            android:id="@+id/details_item_star"
+            style="@android:style/Widget.Holo.Light.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:numStars="5"
+            app:layout_constraintBottom_toBottomOf="@+id/details_item_rating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.092"
+            app:layout_constraintStart_toEndOf="@+id/details_item_rating"
+            app:layout_constraintTop_toTopOf="@+id/details_item_rating"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/details_item_avaliation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_regular"
+            android:text="+500 avaliações"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/details_item_rating"
+            app:layout_constraintTop_toBottomOf="@+id/details_item_star" />
+
+        <ImageView
+            android:id="@+id/details_globo_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toStartOf="@+id/details_opinion_ellipse"
+            app:layout_constraintTop_toBottomOf="@+id/details_opinion_ellipse"
+            app:srcCompat="@drawable/location" />
+
+        <TextView
+            android:id="@+id/details_item_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/quicksand_regular"
+            android:text="www.cervejaria.com.br"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/details_globo_location"
+            app:layout_constraintTop_toBottomOf="@+id/details_opinion_ellipse" />
+
+        <ImageView
+            android:id="@+id/line_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#D8D8D8"
+            android:fillColor="#FFD60A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_item_site"
+            app:srcCompat="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/target_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17.17dp"
+            app:layout_constraintStart_toStartOf="@+id/details_globo_location"
+            app:layout_constraintTop_toBottomOf="@+id/line_divider1"
+            app:srcCompat="@drawable/target_location" />
+
+        <TextView
+            android:id="@+id/details_item_adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/quicksand_regular"
+            android:text="618 Fifth Ave, San Diego, CA 92101, Estados Unidos"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/target_location"
+            app:layout_constraintTop_toTopOf="@+id/line_divider1" />
+
+        <ImageView
+            android:id="@+id/line_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#D8D8D8"
+            android:fillColor="#FFD60A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_item_adress"
+            app:srcCompat="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/icon_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19.75dp"
+            app:layout_constraintStart_toStartOf="@+id/target_location"
+            app:layout_constraintTop_toBottomOf="@+id/line_divider2"
+            app:srcCompat="@drawable/icon_location_map" />
+
+        <TextView
+            android:id="@+id/details_location_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8.75dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/quicksand_regular"
+            android:text="Ver no mapa"
+            android:textColor="@color/black"
+            android:textIsSelectable="true"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/icon_map"
+            app:layout_constraintTop_toBottomOf="@+id/line_divider2"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/line_divider3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="#D8D8D8"
+            android:fillColor="#FFD60A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_location_map"
+            app:srcCompat="@drawable/line" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="60dp"
+            android:backgroundTint="#FFCC00"
+            android:text="AVALIAR CERVEJARIA"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/line_divider4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="44dp"
+            android:background="#D8D8D8"
+            android:fillColor="#FFD60A"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/line"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageButton
+            android:id="@+id/details_share_btn"
+            android:layout_width="18dp"
+            android:layout_height="19.91dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_divider4"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/share_card_opinion"
+            tools:layout_editor_absoluteX="314dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/details_heart_btn"
+            android:layout_width="20dp"
+            android:layout_height="18.35dp"
+
+            android:layout_marginStart="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/details_share_btn"
+            app:layout_constraintStart_toEndOf="@+id/details_share_btn"
+            app:srcCompat="@drawable/heart_card_opinion" />
+
+        <!--    <androidx.fragment.app.FragmentContainerView-->
+        <!--        android:id="@+id/detailsFragment"-->
+        <!--        android:name="com.ciandt.breweryees.ui.details.GalleryFragment"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="0dp"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
