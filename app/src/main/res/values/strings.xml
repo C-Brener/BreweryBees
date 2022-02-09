@@ -14,4 +14,14 @@
     <string name="IconBeer">Button Icon Beer</string>
     <string name="ButtonFavorite">FavoriteButtonBeer</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="salvar">Salve</string>
+    <string name="typeInput">nome@email.com</string>
+    <string name="checked">Lembrar meu e-mail para futuras avaliações</string>
+    <string name="Evaluate">Avalie a Cervejaria A</string>
+    <string name="Avaliacao">Sua avaliação foi</string>
+    <string name="Add">adicionada com sucesso!</string>
+    <string name="drink">Um Brinde!</string>
+    <string name="exit">Exit</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>
