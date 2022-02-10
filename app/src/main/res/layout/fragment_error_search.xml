@@ -6,8 +6,7 @@
     android:layout_height="234dp"
     android:layout_marginLeft="6dp"
     android:layout_marginRight="6dp"
-    android:background="@color/white"
-    >
+    android:background="@color/white">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/search_error"
             android:layout_width="match_parent"
