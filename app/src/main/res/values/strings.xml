@@ -13,6 +13,9 @@
     <string name="GPS">Utilizar meu local</string>
     <string name="IconBeer">Button Icon Beer</string>
     <string name="ButtonFavorite">FavoriteButtonBeer</string>
+    <string name="no_results">Nenhum resultado encontrado para a busca</string>
+    <string name="no_search">Nenhum termo digitado</string>
+    <string name="try_again">Por favor, verifique sua pesquisa e tente novamente para obter resultados.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="salvar">Salve</string>

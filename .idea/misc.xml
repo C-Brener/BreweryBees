@@ -11,11 +11,7 @@
         <entry key="app/src/main/res/layout-normal/activity_main.xml" value="0.13858695652173914" />
         <entry key="app/src/main/res/layout-small/activity_main.xml" value="0.13858695652173914" />
         <entry key="app/src/main/res/layout-v23/activity_main.xml" value="0.19114583333333332" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_brinde_modal.xml" value="0.25416666666666665" />
-        <entry key="app/src/main/res/layout/fragment_container_modal.xml" value="0.19972826086956522" />
-        <entry key="app/src/main/res/layout/fragment_item_list_dialog_list_dialog.xml" value="0.17135416666666667" />
-        <entry key="app/src/main/res/layout/fragment_modal.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4009216589861751" />
         <entry key="app/src/main/res/layout/fragment_top10.xml" value="0.2727272727272727" />
         <entry key="app/src/main/res/layout/top_item.xml" value="0.22" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.33" />
