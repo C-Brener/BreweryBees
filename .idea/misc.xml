@@ -13,10 +13,10 @@
         <entry key="app/src/main/res/layout/activity_error_search.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_search_error.xml" value="0.12681159420289856" />
-        <entry key="app/src/main/res/layout/fragment_error_results.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_error_search.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_error_results.xml" value="0.12907608695652173" />
+        <entry key="app/src/main/res/layout/fragment_error_search.xml" value="0.16927083333333334" />
         <entry key="app/src/main/res/layout/fragment_top10.xml" value="0.12681159420289856" />
-        <entry key="app/src/main/res/layout/top_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/top_item.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.33" />
       </map>
     </option>
