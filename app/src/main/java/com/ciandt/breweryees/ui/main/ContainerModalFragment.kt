@@ -6,6 +6,7 @@ import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.FragmentModalBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
@@ -32,7 +33,7 @@ class ModalFragment : BottomSheetDialogFragment() {
             if (inputEmail.text.toString().isValidEmail()) {
                 brindeFragment.show(childFragmentManager, "SHow Fragment")
             }else{
-                inputEmail.error = "Email Invalid"
+                inputEmail.error = getString(R.string.errorAlert)
             }
         }
     }

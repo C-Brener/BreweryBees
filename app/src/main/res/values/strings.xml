@@ -26,5 +26,6 @@
     <string name="Add">adicionada com sucesso!</string>
     <string name="drink">Um Brinde!</string>
     <string name="exit">Exit</string>
+    <string name="errorAlert">Email Invalid</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
