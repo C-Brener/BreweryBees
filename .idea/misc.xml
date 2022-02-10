@@ -16,6 +16,7 @@
         <entry key="app/src/main/res/layout/activity_error_search.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_search_error.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/fragment_error_results.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_error_search.xml" value="0.16927083333333334" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.1" />
