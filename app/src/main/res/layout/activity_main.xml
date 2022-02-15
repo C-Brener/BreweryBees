@@ -9,11 +9,11 @@
     >
 
 
-    <Toolbar
-        android:navigationIcon="@drawable/ion_beer"
-        android:title="@string/app_name"
-        android:titleTextColor="@color/yellow_bees"
-        android:contentInsetEndWithActions="0dp"
+    <androidx.appcompat.widget.Toolbar
+        app:navigationIcon="@drawable/ion_beer"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/yellow_bees"
+        app:contentInsetEndWithActions="0dp"
         android:id="@+id/my_toolbar"
         android:layout_width="0dp"
         android:layout_height="56dp"
@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentInsetStartWithNavigation="0dp"
+        app:contentInsetStartWithNavigation="0dp"
         />
 
     <ImageButton
@@ -74,7 +74,7 @@
         app:layout_constraintStart_toStartOf="@+id/textWelcome"
         app:layout_constraintTop_toBottomOf="@+id/textWelcome" />
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/searchBar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -84,9 +84,9 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/shape"
         android:backgroundTint="@color/white"
-        android:iconifiedByDefault="false"
+        app:iconifiedByDefault="false"
         android:queryBackground="@android:color/transparent"
-        android:queryHint="@string/search"
+        app:queryHint="@string/search"
         app:layout_constraintStart_toStartOf="parent"
         android:imeOptions="actionSearch"
         app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
@@ -97,7 +97,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:background="@android:color/transparent"
-        android:drawableStart="@drawable/gps"
+        android:drawableLeft="@drawable/gps"
+        android:textColor="@color/black"
         android:drawablePadding="10dp"
         android:fontFamily="@font/quicksand_bold"
         android:text="@string/GPS"
@@ -114,6 +115,6 @@
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/vetorBackground"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:name="com.ciandt.breweryees.ui.main.Top10Fragment"/>
+        android:name="com.ciandt.breweryees.ui.main.TopTenFragment"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
