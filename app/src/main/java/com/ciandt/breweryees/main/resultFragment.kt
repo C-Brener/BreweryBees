@@ -29,7 +29,7 @@ class resultFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_result, container, false)
+        return inflater.inflate(R.layout.fragment_card_result, container, false)
     }
 
 }
