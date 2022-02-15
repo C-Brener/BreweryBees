@@ -17,7 +17,6 @@ private const val ARG_PARAM2 = "param2"
 class CardResultFragment : Fragment() {
     private var _binding : FragmentCardResultBinding? = null
     private val binding get() = _binding!!
-    private lateinit var viewModel: Top10ViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +30,6 @@ class CardResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        topRecyclerView.adapter = CervejariaAdapter(fakeCervejaria())
-        //setupListeners()
-        recyclerViewIndicator.setRecyclerView(topRecyclerView)
     }
 
 
