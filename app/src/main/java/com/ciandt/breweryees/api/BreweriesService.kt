@@ -9,7 +9,4 @@ interface BreweriesService {
     @GET("/breweries/topTen")
     suspend fun breweriesTopTen():List<BreweriesModel>
 
-
-
-
 }
