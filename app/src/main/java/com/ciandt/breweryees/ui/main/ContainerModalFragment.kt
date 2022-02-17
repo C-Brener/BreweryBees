@@ -10,7 +10,6 @@ import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.FragmentModalBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-
 class ModalFragment : BottomSheetDialogFragment() {
     private var _binding: FragmentModalBinding? = null
     private val binding get() = _binding!!

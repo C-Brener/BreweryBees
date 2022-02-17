@@ -1,4 +1,4 @@
-package com.ciandt.breweryees.main
+package com.ciandt.breweryees.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,21 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.ciandt.breweryees.R
 
-
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
 class resultFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
