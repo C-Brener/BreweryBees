@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -61,6 +62,8 @@ dependencies {
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.7.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.7.2'
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.8.0")
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
 
     //Picasso

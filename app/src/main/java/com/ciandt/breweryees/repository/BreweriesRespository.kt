@@ -23,4 +23,7 @@ class BreweriesRespository {
     suspend fun getBreweriesTopTen() : List<BreweriesModel>{
         return service.breweriesTopTen()
     }
+    suspend fun breweriesInitial() : List<BreweriesModel>{
+        return service.breweriesInitial("breweries_id")
+    }
 }
