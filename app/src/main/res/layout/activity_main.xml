@@ -115,7 +115,7 @@
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/vetorBackground"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:name="com.ciandt.breweryees.ui.main.Top10Fragment"
+        android:name="com.ciandt.breweryees.ui.main.TopTenFragment"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
