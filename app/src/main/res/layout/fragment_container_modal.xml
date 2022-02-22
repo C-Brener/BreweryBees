@@ -12,7 +12,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.ciandt.mytestmodal.ModalFragment"
+        android:name="com.ciandt.breweryees.ui.main.ModalFragment"
         />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

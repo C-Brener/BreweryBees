@@ -1,4 +1,4 @@
-package com.ciandt.mytestmodal
+package com.ciandt.breweryees.ui.main
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.FragmentModalBinding
+import com.ciandt.mytestmodal.BrindeModalFragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
