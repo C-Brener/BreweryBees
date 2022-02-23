@@ -7,7 +7,7 @@ import com.ciandt.breweryees.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
-class BreweryeesApp : Application() {
+class BreweriesApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
@@ -16,7 +16,7 @@ class BreweryeesApp : Application() {
 
     private fun initKoin(){
         startKoin{
-            androidContext(this@BreweryeesApp)
+            androidContext(this@BreweriesApp)
             modules(networkingModule,repositoryModule, viewModelModule)
         }
     }
