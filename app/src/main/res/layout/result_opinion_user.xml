@@ -39,7 +39,8 @@
         android:layout_marginTop="16dp"
         android:text="Ordenar por: Nota"
         app:layout_constraintStart_toStartOf="@+id/contains_result_opinion"
-        app:layout_constraintTop_toBottomOf="@+id/contains_result_opinion" />
+        app:layout_constraintTop_toBottomOf="@+id/contains_result_opinion"
+        />
 
     <ImageView
         android:id="@+id/filter_icon_opinion"

@@ -10,7 +10,7 @@ import com.ciandt.breweryees.databinding.FragmentCardResultBinding
 class CardResultFragment : Fragment() {
     private var _binding : FragmentCardResultBinding? = null
     private val binding get() = _binding!!
-    //private lateinit var viewModel: TopTenViewModel
+    //private lateinit var viewModel: Top10ViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,9 +21,12 @@ class CardResultFragment : Fragment() {
         _binding = FragmentCardResultBinding.inflate(inflater,container,false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //topRecyclerView.adapter = CervejariaAdapter(fakeCervejaria())
+        //setupListeners()
+        //recyclerViewIndicator.setRecyclerView(topRecyclerView)
     }
 
     override fun onDestroyView() {
