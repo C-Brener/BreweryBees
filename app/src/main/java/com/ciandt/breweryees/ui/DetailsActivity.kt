@@ -26,8 +26,23 @@ class DetailsActivity : AppCompatActivity() {
         binding = ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         breweriesId = intent.getStringExtra("breweriesId").toString()
+
+
+
+        viewModel.getBreweriesDetails.observe(this){ breweries ->
+            binding.detailsItemName.text = breweries.name
+            binding.detailsOpinionLetter.text = breweries.photos.toString()
+            binding.detailsItemRating.text = breweries.average.toString()
+            binding.detailsItemType.text = breweries.brewery_type
+            binding.detailsItemStar.rating = breweries.average!!.toFloat()
+            binding.detailsItemAvaliation.text = breweries.size_evaluations.toString()
+            binding.detailsItemSite.text = breweries.website_url
+            binding.detailsItemAdress.text = "${breweries.street} ${breweries.address2} ${breweries.address3} ${breweries.city} ${breweries.state} ${breweries.postal_code}"
+        }
         val breweriesName = "Test"
+        viewModel.getDetails(breweriesId)
 
 
         binding.btnRating.setOnClickListener{
@@ -37,11 +52,6 @@ class DetailsActivity : AppCompatActivity() {
 
     override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
         return super.onCreateView(name, context, attrs)
-        viewModel.getBreweriesDetails.observe(this){ breweries ->
-         binding.detailsItemName.text = breweries.name
-        }
-
-        viewModel.getDetails(breweriesId)
     }
 
     private fun showRatingDialog(breweriesName: String) {
