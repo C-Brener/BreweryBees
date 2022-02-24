@@ -50,15 +50,19 @@
 
     </com.kingfisher.easyviewindicator.RecyclerViewIndicator>
 
-    <ImageView
+    <Button
         android:id="@+id/gallery_item_btnAdd"
+        android:text="ADCIONAR FOTO"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_margin="16dp"
-        android:src="@drawable/btn_add_img"
+        android:background="@drawable/shape_transp"
+        android:queryBackground="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="@+id/galleryViewIndicator"
         app:layout_constraintStart_toStartOf="@+id/galleryViewIndicator"
         app:layout_constraintTop_toBottomOf="@+id/galleryViewIndicator" />
+
+
 
 
 
