@@ -23,27 +23,30 @@ class DetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_details)
-
         binding = ActivityDetailsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         breweriesId = intent.getStringExtra("breweriesId").toString()
+        val breweriesName = "Test"
+
 
         binding.btnRating.setOnClickListener{
-            showRatingDialog()
+            showRatingDialog(breweriesName)
         }
     }
 
     override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
         return super.onCreateView(name, context, attrs)
-
     }
 
-    private fun showRatingDialog(){
+    private fun showRatingDialog(breweriesName: String) {
         val dialog = dialog()
         val sheetBind: FragmentRatingBinding = FragmentRatingBinding.inflate(layoutInflater)
-
+        dialog.dismiss()
         dialog.setContentView(sheetBind.root)
         dialog.show()
+
+        //sheetBind.txtTitle.text = breweriesName
 
         sheetBind.btnSave.setOnClickListener{
             saveRating(sheetBind,dialog)
@@ -61,9 +64,11 @@ class DetailsActivity : AppCompatActivity() {
         viewModel.setRating(email,breweriesId,rating)
 
         viewModel.setBreweriesRating.observe(this){breweries ->
-            if(breweries != null){
+            if(breweries.email != null) {
+                dialog.dismiss()
                 dialogSuccess(dialog)
             }else{
+                dialog.dismiss()
                 dialogError(dialog)
             }
         }
@@ -85,5 +90,9 @@ class DetailsActivity : AppCompatActivity() {
         val sheetErrorBind: FragmentRatingErrorBinding = FragmentRatingErrorBinding.inflate(layoutInflater,null,false)
         dialog.setContentView(sheetErrorBind.root)
         dialog.show()
+
+        sheetErrorBind.btnExit.setOnClickListener {
+           dialog.dismiss()
+        }
     }
 }

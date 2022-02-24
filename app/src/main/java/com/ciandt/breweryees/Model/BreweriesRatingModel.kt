@@ -1,5 +1,7 @@
 package com.ciandt.breweryees.Model
 
+import retrofit2.http.Field
+
 data class BreweriesRatingModel(
     var email: String? = null,
     var brewery_id: String? = null,

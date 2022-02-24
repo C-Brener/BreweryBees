@@ -22,7 +22,6 @@ class BreweriesRepositoryImp(private val service: BreweriesService): BreweriesRe
         }.onException {
             data = null
         }
-
         return data!!
     }
 
@@ -33,26 +32,25 @@ class BreweriesRepositoryImp(private val service: BreweriesService): BreweriesRe
         responseSearchCity.onSuccess {
             data = this.data
         }.onError {
-            data = null
+            data = listOf<BreweriesModel>()
         }.onException {
-            data = null
+            data = listOf<BreweriesModel>()
         }
-
-
         return data!!
     }
 
     override suspend fun setBreweriesRating(breweriesRating : BreweriesRatingModel): BreweriesRatingModel {
 
         val response = service.setBreweriesRating(breweriesRating)
-        var data :BreweriesRatingModel? = null
+        var data :BreweriesRatingModel? = BreweriesRatingModel()
 
         response.onSuccess {
             data = this.data
+        }.onError {
+            data = BreweriesRatingModel()
+        }.onException {
+            data = BreweriesRatingModel()
         }
-
         return data!!
     }
 }
-
-

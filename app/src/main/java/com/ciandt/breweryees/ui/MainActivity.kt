@@ -4,9 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.ciandt.breweryees.R
 import androidx.appcompat.widget.SearchView
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.ActivityMainBinding
 import com.ciandt.breweryees.ui.main.ResultFragment
 
