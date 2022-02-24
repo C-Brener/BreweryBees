@@ -10,4 +10,6 @@ interface BreweriesService {
     @GET("/breweries/topTen")
     suspend fun breweriesTopTen():ApiResponse<List<BreweriesModel>>
 
+    @GET("/breweries")
+    suspend fun breweriesInitial(@Query(value = "by_city", encoded = true) by_city :String):List<BreweriesModel>
 }
