@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow_bees">#FFCC00</color>
     <color name="background">#F2F2F7</color>
+    <color name="verde_bees">#03AD00</color>
+    <color name="red_bees">#C40F0F</color>
 </resources>
