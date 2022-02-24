@@ -53,4 +53,20 @@ class BreweriesRepositoryImp(private val service: BreweriesService): BreweriesRe
         }
         return data!!
     }
+
+    override suspend fun getBreweriesDetails(breweriesId: String): BreweriesModel{
+        val responseDetails = service.getBreweriesDetails(breweriesId)
+        var data : BreweriesModel? = null
+
+        responseDetails.onSuccess {
+            data = this.data
+        }.onError {
+            data = BreweriesModel()
+        }.onException {
+            data = BreweriesModel()
+        }
+        return data!!
+    }
+
+
 }

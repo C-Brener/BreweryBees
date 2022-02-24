@@ -21,7 +21,7 @@ interface BreweriesService {
     suspend fun breweriesInitial(@Query(value = "by_city", encoded = true) by_city :String):List<BreweriesModel>
 
     @GET("/breweries/{breweryId}")
-    suspend fun breweriesId(@Path( value = "id", encoded = true)breweryId :String):List<BreweriesModel>
+    suspend fun getBreweriesDetails(@Path( value = "id", encoded = true)breweryId :String):ApiResponse<BreweriesModel>
 
     suspend fun getBreweriesCity(@Query(value = "by_city", encoded = true) by_city :String): ApiResponse<List<BreweriesModel>>
 }

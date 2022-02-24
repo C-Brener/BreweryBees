@@ -1,11 +1,12 @@
 package com.ciandt.breweryees.di
 
+import com.ciandt.breweryees.repository.BreweriesRepositoryImp
 import com.ciandt.breweryees.repository.BreweriesRespository
-import com.ciandt.breweryees.repository.BreweriesRespositoryIpml
+
 import org.koin.dsl.module
 
-val repositoriesModule = module {
+val repositoryModule = module {
     factory<BreweriesRespository> {
-        BreweriesRespositoryIpml(get())
+        BreweriesRepositoryImp(get())
     }
 }

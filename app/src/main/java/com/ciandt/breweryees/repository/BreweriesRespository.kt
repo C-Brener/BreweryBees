@@ -11,4 +11,5 @@ interface BreweriesRespository {
 
     suspend fun setBreweriesRating(breweriesRating: BreweriesRatingModel): BreweriesRatingModel
 
+    suspend fun getBreweriesDetails(breweriesId:String): BreweriesModel
 }

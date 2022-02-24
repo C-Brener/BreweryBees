@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun viewSearch(search:String){
-        val fragment = ResultFragment()
+        val fragment = dd .ResultFragment()
         val bundle = Bundle()
         bundle.putString("searchCity",search)
         val transaction = supportFragmentManager.beginTransaction()
