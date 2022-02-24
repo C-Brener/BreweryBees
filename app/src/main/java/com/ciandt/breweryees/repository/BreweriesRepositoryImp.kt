@@ -11,14 +11,14 @@ class BreweriesRepositoryImp(private val service: BreweriesService): BreweriesRe
     override suspend fun getBreweriesTopTen(): List<BreweriesModel> {
 
         val response = service.breweriesTopTen()
-        var data: List<BreweriesModel>? =null
+        var data: List<BreweriesModel> = listOf(BreweriesModel())
 
         response.onSuccess{
             data = this.data
         }.onError {
-            data = null
+            data = listOf(BreweriesModel())
         }.onException {
-            data = null
+            data = listOf(BreweriesModel())
         }
 
         return data!!

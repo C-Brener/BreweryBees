@@ -1,23 +1,42 @@
 package com.ciandt.breweryees.ui.main
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ciandt.breweryees.R
+import androidx.fragment.app.Fragment
+import com.ciandt.breweryees.databinding.FragmentTopTenBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TopTenFragment : Fragment() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
+    private var _binding : FragmentTopTenBinding? = null
+    private val binding get() = _binding!!
+
+    private val viewModel: TopTenViewModel by viewModel()
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ) : View {
+        _binding = FragmentTopTenBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_top_ten, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewModel.topTenList.observe(viewLifecycleOwner) { list ->
+            if (list.isNotEmpty()) {
+                binding.topTenRecyclerView.adapter = TopTenAdapter(list)
+                binding.topTenViewIndicator.setRecyclerView(binding.topTenRecyclerView)
+            }
+        }
+        viewModel.getTopTenList()
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
 
 }
