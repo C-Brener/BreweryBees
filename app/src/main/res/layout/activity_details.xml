@@ -216,7 +216,7 @@
             app:srcCompat="@drawable/line" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_rating"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
