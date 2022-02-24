@@ -9,7 +9,8 @@
     android:layout_marginTop="16dp"
     android:layout_marginBottom="15dp"
     app:cardCornerRadius="15dp"
-    android:background="@color/white">
+    android:background="@color/white"
+    style="@style/Widget.app.CardView">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_item"
@@ -70,28 +71,25 @@
             android:id="@+id/details_item_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="23dp"
+            android:layout_marginEnd="4dp"
             android:fontFamily="@font/quicksand_regular"
             android:text="@string/rating"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/details_item_name"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/details_item_star"
+            app:layout_constraintEnd_toStartOf="@+id/details_item_star"
+            app:layout_constraintTop_toTopOf="@+id/details_item_star" />
 
         <RatingBar
             android:id="@+id/details_item_star"
             style="@android:style/Widget.Holo.Light.RatingBar.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
             android:numStars="5"
-            app:layout_constraintBottom_toBottomOf="@+id/details_item_rating"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.092"
-            app:layout_constraintStart_toEndOf="@+id/details_item_rating"
-            app:layout_constraintTop_toTopOf="@+id/details_item_rating"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/details_item_avaliation"
@@ -101,8 +99,7 @@
             android:text="+500 avaliações"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/details_item_rating"
+            app:layout_constraintEnd_toEndOf="@+id/details_item_star"
             app:layout_constraintTop_toBottomOf="@+id/details_item_star" />
 
         <ImageView
@@ -252,8 +249,8 @@
             app:layout_constraintTop_toBottomOf="@+id/line_divider4"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/share_card_opinion"
-            tools:layout_editor_absoluteX="314dp"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="314dp" />
 
         <ImageButton
             android:id="@+id/details_heart_btn"
@@ -263,7 +260,7 @@
             android:layout_marginStart="12dp"
             app:layout_constraintBottom_toBottomOf="@+id/details_share_btn"
             app:layout_constraintStart_toEndOf="@+id/details_share_btn"
-            app:srcCompat="@drawable/heart_card_opinion" />
+            app:srcCompat="@drawable/ic_heart" />
 
         <!--    <androidx.fragment.app.FragmentContainerView-->
         <!--        android:id="@+id/detailsFragment"-->
