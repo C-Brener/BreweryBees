@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ciandt.breweryees.R
 import androidx.appcompat.widget.SearchView
 import com.ciandt.breweryees.databinding.ActivityMainBinding
+import com.ciandt.breweryees.ui.main.ResultFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun viewSearch(search:String){
-        val fragment = dd .ResultFragment()
+        val fragment = ResultFragment()
         val bundle = Bundle()
         bundle.putString("searchCity",search)
         val transaction = supportFragmentManager.beginTransaction()

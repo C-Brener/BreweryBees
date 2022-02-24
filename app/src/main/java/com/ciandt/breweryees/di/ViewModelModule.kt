@@ -7,5 +7,6 @@ import org.koin.dsl.module
 
 val viewModelModule = module {
     factory { DetailsViewModel(get()) }
+    factory { TopTenViewModel(get()) }
     factory { ResultViewModel(get())}
 }

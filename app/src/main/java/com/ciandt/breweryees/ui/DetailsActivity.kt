@@ -37,6 +37,11 @@ class DetailsActivity : AppCompatActivity() {
 
     override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
         return super.onCreateView(name, context, attrs)
+        viewModel.getBreweriesDetails.observe(this){ breweries ->
+         binding.detailsItemName.text = breweries.name
+        }
+
+        viewModel.getDetails(breweriesId)
     }
 
     private fun showRatingDialog(breweriesName: String) {
@@ -95,4 +100,5 @@ class DetailsActivity : AppCompatActivity() {
            dialog.dismiss()
         }
     }
+
 }
