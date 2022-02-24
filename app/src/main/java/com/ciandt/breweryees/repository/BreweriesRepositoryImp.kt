@@ -23,6 +23,22 @@ class BreweriesRepositoryImp(private val service: BreweriesService): BreweriesRe
 
         return data!!
     }
+
+    override suspend fun getBreweriesCity(search: String): List<BreweriesModel> {
+        val responseSearchCity = service.getBreweriesCity(search)
+        var data : List<BreweriesModel>? = null
+
+        responseSearchCity.onSuccess {
+            data = this.data
+        }.onError {
+            data = null
+        }.onException {
+            data = null
+        }
+
+
+        return data!!
+    }
 }
 
 

@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2777777777777778" />
+        <entry key="app/src/main/res/drawable/shape.xml" value="0.107" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="app/src/main/res/layout/card_opinion_horizontal.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/layout/fragment_brinde_modal.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_card_result.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_container_modal.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_error_results.xml" value="0.14130434782608695" />
+        <entry key="app/src/main/res/layout/fragment_modal.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_result.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/result_opinion_user.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

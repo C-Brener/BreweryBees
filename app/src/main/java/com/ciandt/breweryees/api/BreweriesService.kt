@@ -11,5 +11,5 @@ interface BreweriesService {
     suspend fun breweriesTopTen():ApiResponse<List<BreweriesModel>>
 
     @GET("/breweries")
-    suspend fun breweriesInitial(@Query(value = "by_city", encoded = true) by_city :String):List<BreweriesModel>
+    suspend fun getBreweriesCity(@Query(value = "by_city", encoded = true) by_city :String): ApiResponse<List<BreweriesModel>>
 }
