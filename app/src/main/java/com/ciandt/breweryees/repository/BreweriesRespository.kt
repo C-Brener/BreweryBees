@@ -9,6 +9,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 interface BreweriesRespository {
 
+    suspend fun getBreweriesTopTen() : List<BreweriesModel>
+    suspend fun getBreweriesCity(search:String) : List<BreweriesModel>
+
     suspend fun getBreweriesTopTen(): List<BreweriesModel>
 
     suspend fun setBreweriesRating(breweriesRating: BreweriesRatingModel): BreweriesRatingModel

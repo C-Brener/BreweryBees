@@ -17,4 +17,6 @@ interface BreweriesService {
     suspend fun setBreweriesRating(@Body breweriesRatingModel: BreweriesRatingModel):ApiResponse<BreweriesRatingModel>
 
 
+    @GET("/breweries")
+    suspend fun getBreweriesCity(@Query(value = "by_city", encoded = true) by_city :String): ApiResponse<List<BreweriesModel>>
 }
