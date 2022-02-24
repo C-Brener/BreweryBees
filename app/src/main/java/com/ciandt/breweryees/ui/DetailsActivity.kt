@@ -10,6 +10,7 @@ import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.ActivityDetailsBinding
 import com.ciandt.breweryees.databinding.FragmentModalBinding
 import com.ciandt.breweryees.ui.details.DetailsViewModel
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailsActivity : AppCompatActivity() {
@@ -27,7 +28,6 @@ class DetailsActivity : AppCompatActivity() {
         binding.btnRating.setOnClickListener{
 
         }
-
     }
 
     override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
@@ -41,6 +41,9 @@ class DetailsActivity : AppCompatActivity() {
     }
 
 
+    private fun dialog(): BottomSheetDialog{
+        return BottomSheetDialog(this, R.style)
+    }
 
 
 
