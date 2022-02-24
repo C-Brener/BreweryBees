@@ -28,7 +28,7 @@ class BreweriesRepositoryImp(private val service: BreweriesService): BreweriesRe
 
     override suspend fun setBreweriesRating(breweriesRating : BreweriesRatingModel): BreweriesRatingModel {
 
-        val response = service.setBreweriesRating()
+        val response = service.setBreweriesRating(breweriesRating)
         var data :BreweriesRatingModel? = null
 
         response.onSuccess {
