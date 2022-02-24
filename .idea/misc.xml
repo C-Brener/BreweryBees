@@ -7,40 +7,30 @@
         <entry key="app/src/main/res/drawable-v24/black_radius.xml" value="0.1795" />
         <entry key="app/src/main/res/drawable-v24/gray_radius.xml" value="0.1795" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1795" />
-        <entry key="app/src/main/res/drawable-v24/shape_transp.xml" value="0.247" />
         <entry key="app/src/main/res/drawable/bg_dialog_rating.xml" value="0.1795" />
         <entry key="app/src/main/res/drawable/borde_red.xml" value="0.1105" />
         <entry key="app/src/main/res/drawable/border_red.xml" value="0.1105" />
         <entry key="app/src/main/res/drawable/btn_add_img.xml" value="0.1795" />
-        <entry key="app/src/main/res/drawable/ellipse_small.xml" value="0.247" />
-        <entry key="app/src/main/res/drawable/group_46.xml" value="0.247" />
-        <entry key="app/src/main/res/drawable/group_47.xml" value="0.247" />
         <entry key="app/src/main/res/drawable/heart_card_opinion.xml" value="0.1795" />
-        <entry key="app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.247" />
-        <entry key="app/src/main/res/drawable/ic_error.xml" value="0.247" />
-        <entry key="app/src/main/res/drawable/ic_exit.xml" value="0.247" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1795" />
-        <entry key="app/src/main/res/drawable/ic_star.xml" value="0.247" />
         <entry key="app/src/main/res/drawable/rectangle_card_opinion.xml" value="0.1795" />
-        <entry key="app/src/main/res/drawable/shape.xml" value="0.247" />
-        <entry key="app/src/main/res/drawable/shape_transp.xml" value="0.2405" />
         <entry key="app/src/main/res/drawable/share_card_opinion.xml" value="0.1795" />
-        <entry key="app/src/main/res/drawable/splash_bg.xml" value="0.3455" />
-        <entry key="app/src/main/res/layout/activity_details.xml" value="0.19114583333333332" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.5766423357664233" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27314814814814814" />
-        <entry key="app/src/main/res/layout/card_opinion_horizontal.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/card_opinion_horizontal.xml" value="0.67" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.19114583333333332" />
         <entry key="app/src/main/res/layout/fragment_brinde_modal.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_card_result.xml" value="0.3703125" />
         <entry key="app/src/main/res/layout/fragment_container_modal.xml" value="0.19114583333333332" />
         <entry key="app/src/main/res/layout/fragment_error_results.xml" value="0.19114583333333332" />
         <entry key="app/src/main/res/layout/fragment_error_search.xml" value="0.16018518518518518" />
-        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_modal.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_rating_error.xml" value="0.24114583333333334" />
-        <entry key="app/src/main/res/layout/fragment_rating_success.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/fragment_rating.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/fragment_rating_error.xml" value="0.19114583333333332" />
+        <entry key="app/src/main/res/layout/fragment_rating_success.xml" value="0.3703125" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.33419689119170987" />
-        <entry key="app/src/main/res/layout/fragment_top_ten.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/fragment_top_ten.xml" value="0.3703125" />
         <entry key="app/src/main/res/layout/gallery_item.xml" value="0.17222222222222222" />
         <entry key="app/src/main/res/layout/result_opinion_user.xml" value="0.19114583333333332" />
         <entry key="app/src/main/res/layout/top_ten_item.xml" value="0.24114583333333334" />

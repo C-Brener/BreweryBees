@@ -23,7 +23,7 @@ class ResultListAdapter(private val breweryessList : List<BreweriesModel>): Recy
             Toast.makeText(view.context, breweryessList[position].id,Toast.LENGTH_LONG).show()
 
             val intent = Intent(view.context, DetailsActivity::class.java)
-            intent.putExtra("breweries_id",breweryessList[position].id)
+            intent.putExtra("breweriesId",breweryessList[position].id)
             view.context.startActivity(intent)
         }
     }

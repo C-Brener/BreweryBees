@@ -54,13 +54,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/topRecyclerView"
         android:layout_width="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingEnd="6dp"
+        android:paddingHorizontal="6dp"
         android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="@+id/top_title"
-        app:layout_constraintStart_toStartOf="@+id/order_opinion"
-        app:layout_constraintTop_toBottomOf="@+id/order_opinion"
+        app:layout_constraintEnd_toEndOf="@id/top_title"
+        app:layout_constraintStart_toStartOf="@id/order_opinion"
+        app:layout_constraintTop_toBottomOf="@id/order_opinion"
         tools:listitem="@layout/card_opinion_horizontal" />
 
 

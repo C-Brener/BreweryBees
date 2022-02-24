@@ -1,20 +1,21 @@
 package com.ciandt.breweryees.ui.main
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.FragmentResultBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class ResultFragment : Fragment() {
-    var _binding : FragmentResultBinding? = null
+    private var _binding : FragmentResultBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var viewModel : ResultViewModel
-
+    private val viewModel : ResultViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,19 +25,21 @@ class ResultFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentResultBinding.inflate(inflater, container, false)
+
+        _binding = FragmentResultBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this, ResultViewModel.ResultFragmentFactory()).get(ResultViewModel::class.java)
+        val bundle = this.arguments
 
-        viewModel.searchListLiveData.observe(this.viewLifecycleOwner){
-            binding.topRecyclerView.adapter = ResultListAdapter(it)
-
+        viewModel.searchListLiveData.observe(this.viewLifecycleOwner){ list ->
+            binding.topRecyclerView.adapter = ResultListAdapter(list)
         }
-        viewModel.getSearchList("New York")
+        bundle?.getString("searchCity").toString().apply {
+            viewModel.getSearchList(this)
+        }
 
     }
 }
