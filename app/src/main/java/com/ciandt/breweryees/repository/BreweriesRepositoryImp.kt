@@ -31,9 +31,9 @@ class BreweriesRepositoryImp(private val service: BreweriesService): BreweriesRe
         responseSearchCity.onSuccess {
             data = this.data
         }.onError {
-            data = null
+            data = listOf<BreweriesModel>()
         }.onException {
-            data = null
+            data = listOf<BreweriesModel>()
         }
 
 
