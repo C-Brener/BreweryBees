@@ -46,7 +46,7 @@ class DetailsActivity : AppCompatActivity() {
         dialog.setContentView(sheetBind.root)
         dialog.show()
 
-        //sheetBind.txtTitle.text = breweriesName
+        sheetBind.txtTitle.text = breweriesName
 
         sheetBind.btnSave.setOnClickListener{
             saveRating(sheetBind,dialog)
