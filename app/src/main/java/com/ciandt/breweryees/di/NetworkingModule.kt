@@ -2,22 +2,21 @@ package com.ciandt.breweryees.di
 
 import com.ciandt.breweryees.BuildConfig
 import com.ciandt.breweryees.api.BreweriesService
-import com.skydoves.sandwich.coroutines.CoroutinesResponseCallAdapterFactory
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-val networkingModule = module{
+val networkingModule = module {
 
-    single{
+    single {
         OkHttpClient.Builder().build()
     }
 
-    single{
+    single {
         Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
-            .addCallAdapterFactory(CoroutinesResponseCallAdapterFactory.create())
+            .client(get())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
@@ -26,5 +25,4 @@ val networkingModule = module{
         val retrofit = get<Retrofit>()
         retrofit.create(BreweriesService::class.java)
     }
-
 }

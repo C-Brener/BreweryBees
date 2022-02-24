@@ -16,9 +16,12 @@
     <string name="no_results">Nenhum resultado encontrado para a busca</string>
     <string name="no_search">Nenhum termo digitado</string>
     <string name="try_again">Por favor, verifique sua pesquisa e tente novamente para obter resultados.</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_gallery">Galeria</string>
     <string name="add_photo">ADCIONAR FOTO</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
     <string name="salvar">Salve</string>
     <string name="typeInput">nome@email.com</string>
     <string name="checked">Lembrar meu e-mail para futuras avaliações</string>

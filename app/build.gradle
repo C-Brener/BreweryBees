@@ -21,12 +21,13 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField 'String','BASE_URL', "\"https://bootcamp-mobile-01.eastus.cloudapp.azure.com\""
+            buildConfigField 'String', 'BASE_URL', "\"https://bootcamp-mobile-01.eastus.cloudapp.azure.com\""
         }
-        debug{
+
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField 'String','BASE_URL', "\"https://bootcamp-mobile-01.eastus.cloudapp.azure.com\""
+            buildConfigField 'String', 'BASE_URL', "\"https://bootcamp-mobile-01.eastus.cloudapp.azure.com\""
         }
     }
     compileOptions {
