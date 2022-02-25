@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ciandt.breweryees.R
+import com.ciandt.breweryees.databinding.FragmentErrorResultsBinding
 import com.ciandt.breweryees.databinding.FragmentResultBinding
+import com.ciandt.breweryees.ui.MainActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
@@ -35,7 +37,7 @@ class ResultFragment : Fragment() {
         val bundle = this.arguments
 
         viewModel.searchListLiveData.observe(this.viewLifecycleOwner){ list ->
-            binding.topRecyclerView.adapter = ResultListAdapter(list)
+                binding.topRecyclerView.adapter = ResultListAdapter(list)
         }
         bundle?.getString("searchCity").toString().apply {
             viewModel.getSearchList(this)
