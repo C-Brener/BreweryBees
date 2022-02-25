@@ -6,7 +6,8 @@ import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.GalleryItemBinding
 import com.squareup.picasso.Picasso
 
-class GalleryViewHolder(private val binding:GalleryItemBinding) : RecyclerView.ViewHolder(binding.root) {
+
+class GalleryViewHolder(private val binding: GalleryItemBinding) : RecyclerView.ViewHolder(binding.root) {
     fun bind(gallery: BreweriesPhotoModel) = with(binding.root) {
         val picaso = Picasso.get()
         picaso.load(gallery.url)

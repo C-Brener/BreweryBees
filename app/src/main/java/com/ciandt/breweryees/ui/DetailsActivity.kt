@@ -29,8 +29,6 @@ class DetailsActivity : AppCompatActivity() {
 
         breweriesId = intent.getStringExtra("breweriesId").toString()
 
-
-
         viewModel.getBreweriesDetails.observe(this){ breweries ->
             binding.detailsItemName.text = breweries.name
             binding.detailsOpinionLetter.text = breweries.photos.toString()

@@ -27,7 +27,8 @@ class DetailsViewModel(var repository: BreweriesRespository) : ViewModel() {
     }
 
     fun getDetails(breweriesId: String){
-        viewModelScope.launch {
+            viewModelScope.launch {
             _getBreweriesDetails.value = repository.getBreweriesDetails(breweriesId)
+        }
     }
-}}
+}
