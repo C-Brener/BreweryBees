@@ -31,7 +31,7 @@ interface BreweriesService {
     suspend fun getBreweriesDetails(@Path( value = "breweryId", encoded = true) breweryId: String): ApiResponse<BreweriesModel>
 
     @GET("/breweries/photos/{breweryId}")
-    suspend fun getBreweriesPhotos(@Path( value = "breweryId", encoded = true) breweryId: String): ApiResponse<BreweriesPhotoModel>
+    suspend fun getBreweriesPhotos(@Path( value = "breweryId", encoded = true) breweryId: String): ApiResponse<List<BreweriesPhotoModel>>
 
 
 }

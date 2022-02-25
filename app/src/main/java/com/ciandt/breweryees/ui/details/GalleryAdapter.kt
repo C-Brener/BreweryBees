@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ciandt.breweryees.Model.BreweriesPhotoModel
 import com.ciandt.breweryees.databinding.GalleryItemBinding
 
+
 class GalleryAdapter(private val galleryList: List<BreweriesPhotoModel>) : RecyclerView.Adapter<GalleryViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GalleryViewHolder {
 

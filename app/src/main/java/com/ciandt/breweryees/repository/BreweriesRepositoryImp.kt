@@ -71,10 +71,10 @@ class BreweriesRepositoryImp(private val service: BreweriesService): BreweriesRe
 
     override suspend fun getBreweriesPhotos(breweriesId: String): List<BreweriesPhotoModel> {
         val responsePhotos = service.getBreweriesPhotos(breweriesId)
-        var data : List<BreweriesPhotoModel>? = null
+        var data : List<BreweriesPhotoModel>? = listOf<BreweriesPhotoModel>()
 
         responsePhotos.onSuccess {
-            data = listOf(this.data)
+            data = this.data
         }.onError {
             data = listOf<BreweriesPhotoModel>()
         }.onException {

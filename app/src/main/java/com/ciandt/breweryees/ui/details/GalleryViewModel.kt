@@ -11,10 +11,11 @@ import com.ciandt.breweryees.repository.BreweriesRespository
 import kotlinx.coroutines.launch
 
 class GalleryViewModel (var repository: BreweriesRespository) : ViewModel() {
-  private var _getBreweriesPhotos = MutableLiveData<List<BreweriesPhotoModel>>()
+
+    private var _getBreweriesPhotos = MutableLiveData<List<BreweriesPhotoModel>>()
     val getBreweriesPhotos: LiveData<List<BreweriesPhotoModel>> = _getBreweriesPhotos
 
-    public fun getPhotos(breweriesId:String){
+    fun getPhotos(breweriesId:String){
         viewModelScope.launch{
             _getBreweriesPhotos.value = repository.getBreweriesPhotos(breweriesId)
         }
