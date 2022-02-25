@@ -2,6 +2,7 @@ package com.ciandt.breweryees.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -9,7 +10,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        Thread.sleep(2000)
+        setTheme(R.style.Theme_BreweryBees)
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater, null, false)
