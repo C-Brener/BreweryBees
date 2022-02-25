@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class GalleryViewModel (var repository: BreweriesRespository) : ViewModel() {
   private var _getBreweriesPhotos = MutableLiveData<List<BreweriesPhotoModel>>()
-    val getBreweriesPhotoset: LiveData<List<BreweriesPhotoModel>> = _getBreweriesPhotos
+    val getBreweriesPhotos: LiveData<List<BreweriesPhotoModel>> = _getBreweriesPhotos
 
     public fun getPhotos(breweriesId:String){
         viewModelScope.launch{

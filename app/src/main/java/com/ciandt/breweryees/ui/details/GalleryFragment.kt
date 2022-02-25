@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ciandt.breweryees.Model.BreweriesPhotoModel
-import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.FragmentGalleryBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -23,12 +21,12 @@ class GalleryFragment : Fragment() {
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        viewModel.getBreweriesPhotoset.observe(viewLifecycleOwner){list->
+        viewModel.getBreweriesPhotos.observe(viewLifecycleOwner){ list->
             binding.galleryRecyclerView.adapter = GalleryAdapter(list)
             binding.galleryViewIndicator.setRecyclerView(binding.galleryRecyclerView)
         }
         val bundle = this.arguments
-        bundle?.getString("breweries_id").toString().apply{
+        bundle?.getString("breweriesId").toString().apply{
             viewModel.getPhotos(this)
         }
     }
