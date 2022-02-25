@@ -14,7 +14,7 @@
         android:gravity="center_horizontal">
 
         <ImageButton
-            android:id="@+id/exit_botton"
+            android:id="@+id/btn_exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -28,7 +28,7 @@
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
-            android:id="@+id/text"
+            android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -49,11 +49,11 @@
             android:progressTint="@color/yellow_bees"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text" />
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
 
         <EditText
-            android:id="@+id/emailAddress"
+            android:id="@+id/txt_email"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -77,10 +77,10 @@
             android:text="@string/checked"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_email" />
 
         <Button
-            android:id="@+id/ButtonSave"
+            android:id="@+id/btn_save"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"

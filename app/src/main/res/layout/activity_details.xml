@@ -37,10 +37,10 @@
             android:textAlignment="center"
             android:textColor="#827717"
             android:textSize="32sp"
-            app:layout_constraintBottom_toBottomOf="@+id/details_opinion_ellipse"
-            app:layout_constraintEnd_toEndOf="@+id/details_opinion_ellipse"
-            app:layout_constraintStart_toStartOf="@+id/details_opinion_ellipse"
-            app:layout_constraintTop_toTopOf="@+id/details_opinion_ellipse" />
+            app:layout_constraintBottom_toBottomOf="@id/details_opinion_ellipse"
+            app:layout_constraintEnd_toEndOf="@id/details_opinion_ellipse"
+            app:layout_constraintStart_toStartOf="@id/details_opinion_ellipse"
+            app:layout_constraintTop_toTopOf="@id/details_opinion_ellipse" />
 
         <TextView
             android:id="@+id/details_item_name"
@@ -51,8 +51,8 @@
             android:text="@string/top_item_title"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/details_opinion_ellipse"
-            app:layout_constraintTop_toTopOf="@+id/details_opinion_ellipse" />
+            app:layout_constraintStart_toEndOf="@id/details_opinion_ellipse"
+            app:layout_constraintTop_toTopOf="@id/details_opinion_ellipse" />
 
         <TextView
             android:id="@+id/details_item_type"
@@ -64,8 +64,8 @@
             android:text="@string/type"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/details_opinion_ellipse"
-            app:layout_constraintTop_toBottomOf="@+id/details_item_name" />
+            app:layout_constraintStart_toEndOf="@id/details_opinion_ellipse"
+            app:layout_constraintTop_toBottomOf="@id/details_item_name" />
 
         <TextView
             android:id="@+id/details_item_rating"
@@ -77,19 +77,20 @@
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/details_item_star"
-            app:layout_constraintEnd_toStartOf="@+id/details_item_star"
-            app:layout_constraintTop_toTopOf="@+id/details_item_star" />
+            app:layout_constraintEnd_toStartOf="@id/details_item_star"
+            app:layout_constraintTop_toTopOf="@id/details_item_star" />
 
-        <RatingBar
+        <com.ciandt.breweryees.utils.RatingBarSvg
             android:id="@+id/details_item_star"
-            style="@android:style/Widget.Holo.Light.RatingBar.Small"
+            style="@style/Widget.App.RatingBar"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="14dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="16dp"
             android:numStars="5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:rating="3"/>
 
         <TextView
             android:id="@+id/details_item_avaliation"
@@ -99,16 +100,16 @@
             android:text="+500 avaliações"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/details_item_star"
-            app:layout_constraintTop_toBottomOf="@+id/details_item_star" />
+            app:layout_constraintEnd_toEndOf="@id/details_item_star"
+            app:layout_constraintTop_toBottomOf="@id/details_item_star" />
 
         <ImageView
             android:id="@+id/details_globo_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            app:layout_constraintStart_toStartOf="@+id/details_opinion_ellipse"
-            app:layout_constraintTop_toBottomOf="@+id/details_opinion_ellipse"
+            app:layout_constraintStart_toStartOf="@id/details_opinion_ellipse"
+            app:layout_constraintTop_toBottomOf="@id/details_opinion_ellipse"
             app:srcCompat="@drawable/location" />
 
         <TextView
@@ -121,8 +122,8 @@
             android:text="www.cervejaria.com.br"
             android:textColor="@color/black"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/details_globo_location"
-            app:layout_constraintTop_toBottomOf="@+id/details_opinion_ellipse" />
+            app:layout_constraintStart_toEndOf="@id/details_globo_location"
+            app:layout_constraintTop_toBottomOf="@id/details_opinion_ellipse" />
 
         <ImageView
             android:id="@+id/line_divider1"
@@ -135,7 +136,7 @@
             android:fillColor="#FFD60A"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/details_item_site"
+            app:layout_constraintTop_toBottomOf="@id/details_item_site"
             app:srcCompat="@drawable/line" />
 
         <ImageView
@@ -143,8 +144,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="17.17dp"
-            app:layout_constraintStart_toStartOf="@+id/details_globo_location"
-            app:layout_constraintTop_toBottomOf="@+id/line_divider1"
+            app:layout_constraintStart_toStartOf="@id/details_globo_location"
+            app:layout_constraintTop_toBottomOf="@id/line_divider1"
             app:srcCompat="@drawable/target_location" />
 
         <TextView
@@ -172,7 +173,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/details_item_adress"
+            app:layout_constraintTop_toBottomOf="@id/details_item_adress"
             app:srcCompat="@drawable/line" />
 
         <ImageView
@@ -180,8 +181,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="19.75dp"
-            app:layout_constraintStart_toStartOf="@+id/target_location"
-            app:layout_constraintTop_toBottomOf="@+id/line_divider2"
+            app:layout_constraintStart_toStartOf="@id/target_location"
+            app:layout_constraintTop_toBottomOf="@id/line_divider2"
             app:srcCompat="@drawable/icon_location_map" />
 
         <TextView
@@ -196,8 +197,8 @@
             android:textIsSelectable="true"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/icon_map"
-            app:layout_constraintTop_toBottomOf="@+id/line_divider2"
+            app:layout_constraintStart_toEndOf="@id/icon_map"
+            app:layout_constraintTop_toBottomOf="@id/line_divider2"
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageView
@@ -212,11 +213,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/details_location_map"
+            app:layout_constraintTop_toBottomOf="@id/details_location_map"
             app:srcCompat="@drawable/line" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_rating"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
@@ -243,34 +244,21 @@
         <ImageButton
             android:id="@+id/details_share_btn"
             android:layout_width="18dp"
-            android:layout_height="19.91dp"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/line_divider4"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/share_card_opinion"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="314dp" />
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/details_heart_btn"
+            app:layout_constraintEnd_toStartOf="@id/details_heart_btn"
+            app:layout_constraintTop_toTopOf="@id/details_heart_btn"
+            app:srcCompat="@drawable/share_card_opinion"/>
 
         <ImageButton
             android:id="@+id/details_heart_btn"
             android:layout_width="20dp"
-            android:layout_height="18.35dp"
-
-            android:layout_marginStart="12dp"
-            app:layout_constraintBottom_toBottomOf="@+id/details_share_btn"
-            app:layout_constraintStart_toEndOf="@+id/details_share_btn"
-            app:srcCompat="@drawable/ic_heart" />
-
-        <!--    <androidx.fragment.app.FragmentContainerView-->
-        <!--        android:id="@+id/detailsFragment"-->
-        <!--        android:name="com.ciandt.breweryees.ui.details.GalleryFragment"-->
-        <!--        android:layout_width="0dp"-->
-        <!--        android:layout_height="0dp"-->
-        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
+            android:layout_height="19dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_divider4"
+            app:srcCompat="@drawable/ic_heart_blank" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
