@@ -246,18 +246,18 @@
             android:layout_width="18dp"
             android:layout_height="20dp"
             android:layout_marginEnd="16dp"
+            android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/details_heart_btn"
             app:layout_constraintEnd_toStartOf="@+id/details_heart_btn"
             app:layout_constraintTop_toTopOf="@+id/details_heart_btn"
             app:srcCompat="@drawable/share_card_opinion"
-            android:background="parent"
             tools:ignore="MissingConstraints" />
 
         <ImageButton
             android:id="@+id/details_heart_btn"
             android:layout_width="20dp"
             android:layout_height="19dp"
-            android:background="parent"
+            android:background="@color/white"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             app:layout_constraintEnd_toEndOf="parent"

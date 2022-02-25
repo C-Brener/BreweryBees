@@ -46,6 +46,47 @@
         <entry key="app/src/main/res/layout/fragment_container_modal.xml" value="0.19114583333333332" />
         <entry key="app/src/main/res/layout/fragment_error_results.xml" value="0.19114583333333332" />
         <entry key="app/src/main/res/layout/fragment_error_search.xml" value="0.16018518518518518" />
+        <entry key="../../../../layout/custom_preview.xml" value="0.2740740740740741" />
+        <entry key="app/src/main/res/drawable/ic_heart.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/ic_star.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/ic_star_big.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/ic_star_small.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/ic_start_big.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/location.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/rating_small.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/shape.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/share_card_opinion.xml" value="0.206" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.28286852589641437" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_user_opinion.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/card_opinion_horizontal.xml" value="0.3404029692470838" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.3703125" />
+        <entry key="app/src/main/res/layout/fragment_brinde_modal.xml" value="0.3703125" />
+        <entry key="app/src/main/res/layout/fragment_card_result.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_error_results.xml" value="0.2203125" />
+        <entry key="app/src/main/res/layout/fragment_result.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_top10.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_top_ten.xml" value="0.3703125" />
+        <entry key="app/src/main/res/layout/gallery_item.xml" value="0.3703125" />
+        <entry key="app/src/main/res/layout/result_opinion_user.xml" value="0.3389830508474576" />
+        <entry key="app/src/main/res/layout/top_item.xml" value="0.3703125" />
+        <entry key="app/src/main/res/layout/top_ten_item.xml" value="0.3703125" />
+        <entry key="../../../../layout/custom_preview.xml" value="0.3923076923076923" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.16041666666666668" />
+        <entry key="app/src/main/res/drawable/btn_add_img.xml" value="0.2065" />
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.16041666666666668" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.16041666666666668" />
+        <entry key="app/src/main/res/layout-large/activity_main.xml" value="0.10450819672131148" />
+        <entry key="app/src/main/res/layout-normal/activity_main.xml" value="0.13858695652173914" />
+        <entry key="app/src/main/res/layout-small/activity_main.xml" value="0.13858695652173914" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.2140625" />
+        <entry key="app/src/main/res/layout/activity_error_results.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_error_search.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_search_error.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/layout/fragment_error_results.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_error_search.xml" value="0.16927083333333334" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_modal.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_rating.xml" value="0.24114583333333334" />
@@ -70,6 +111,8 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
+        <option name="scale" value="0.5" />
+        <option name="scale" value="0.16927083333333334" />
         <option name="scale" value="0.5" />
       </ProjectState>
     </option>
