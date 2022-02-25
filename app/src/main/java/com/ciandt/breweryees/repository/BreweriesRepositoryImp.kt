@@ -1,6 +1,7 @@
 package com.ciandt.breweryees.repository
 
 import com.ciandt.breweryees.Model.BreweriesModel
+import com.ciandt.breweryees.Model.BreweriesPhotoModel
 import com.ciandt.breweryees.Model.BreweriesRatingModel
 import com.ciandt.breweryees.api.BreweriesService
 import com.skydoves.sandwich.ApiResponse
@@ -53,4 +54,34 @@ class BreweriesRepositoryImp(private val service: BreweriesService): BreweriesRe
         }
         return data!!
     }
+
+    override suspend fun getBreweriesDetails(breweriesId: String): BreweriesModel{
+        val responseDetails = service.getBreweriesDetails(breweriesId)
+        var data : BreweriesModel? = null
+
+        responseDetails.onSuccess {
+            data = this.data
+        }.onError {
+            data = BreweriesModel()
+        }.onException {
+            data = BreweriesModel()
+        }
+        return data!!
+    }
+
+    override suspend fun getBreweriesPhotos(breweriesId: String): List<BreweriesPhotoModel> {
+        val responsePhotos = service.getBreweriesPhotos(breweriesId)
+        var data : List<BreweriesPhotoModel>? = listOf<BreweriesPhotoModel>()
+
+        responsePhotos.onSuccess {
+            data = this.data
+        }.onError {
+            data = listOf<BreweriesPhotoModel>()
+        }.onException {
+            data = listOf<BreweriesPhotoModel>()
+        }
+        return data!!
+    }
+
+
 }

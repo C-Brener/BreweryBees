@@ -26,4 +26,5 @@ val networkingModule = module{
         val retrofit = get<Retrofit>()
         retrofit.create(BreweriesService::class.java)
     }
+
 }

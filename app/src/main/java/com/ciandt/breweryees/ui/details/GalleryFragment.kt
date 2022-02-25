@@ -5,20 +5,29 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ciandt.breweryees.R
+import com.ciandt.breweryees.databinding.FragmentGalleryBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class GalleryFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private var _binding : FragmentGalleryBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false)
-    }
+    private val viewModel:GalleryViewModel by viewModel()
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentGalleryBinding.inflate(inflater,container,false)
+        return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        viewModel.getBreweriesPhotos.observe(viewLifecycleOwner){ list->
+            binding.galleryRecyclerView.adapter = GalleryAdapter(list)
+            binding.galleryViewIndicator.setRecyclerView(binding.galleryRecyclerView)
+        }
+        val bundle = this.arguments
+        bundle?.getString("breweriesId").toString().apply{
+            viewModel.getPhotos(this)
+        }
+    }
 }

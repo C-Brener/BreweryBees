@@ -16,7 +16,6 @@
         android:fontFamily="@font/quicksand_regular"
         android:text="@string/title_gallery"
         android:textSize="14sp"
-        android:textFontWeight="300"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,14 +55,10 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_margin="16dp"
+        android:textColor="@color/black"
         android:background="@drawable/shape_transp"
         android:queryBackground="@android:color/transparent"
-        app:layout_constraintEnd_toEndOf="@+id/galleryViewIndicator"
-        app:layout_constraintStart_toStartOf="@+id/galleryViewIndicator"
-        app:layout_constraintTop_toBottomOf="@+id/galleryViewIndicator" />
-
-
-
-
-
+        app:layout_constraintEnd_toEndOf="@id/galleryViewIndicator"
+        app:layout_constraintStart_toStartOf="@id/galleryViewIndicator"
+        app:layout_constraintTop_toBottomOf="@id/galleryViewIndicator" />
 </androidx.constraintlayout.widget.ConstraintLayout>

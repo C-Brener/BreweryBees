@@ -6,12 +6,15 @@ import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
 import android.view.WindowManager
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.ciandt.breweryees.R
 import com.ciandt.breweryees.databinding.ActivityDetailsBinding
 import com.ciandt.breweryees.databinding.FragmentRatingBinding
 import com.ciandt.breweryees.databinding.FragmentRatingErrorBinding
 import com.ciandt.breweryees.databinding.FragmentRatingSuccessBinding
 import com.ciandt.breweryees.ui.details.DetailsViewModel
+import com.ciandt.breweryees.ui.details.GalleryFragment
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -27,7 +30,22 @@ class DetailsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         breweriesId = intent.getStringExtra("breweriesId").toString()
-        val breweriesName = "Test"
+        var breweriesName ="Cervejaria A"
+
+        viewModel.getBreweriesDetails.observe(this){ breweries ->
+            binding.detailsItemName.text = breweries.name
+            breweriesName = breweries.name.toString()
+            //binding.detailsOpinionLetter.text = breweries.photos.toString()
+            binding.detailsItemRating.text = breweries.average.toString()
+            binding.detailsItemType.text = breweries.brewery_type
+            binding.detailsItemStar.rating = breweries.average!!.toFloat()
+            binding.detailsItemAvaliation.text = breweries.size_evaluations.toString()
+            binding.detailsItemSite.text = breweries.website_url
+            binding.detailsItemAdress.text = "${breweries.street} ${breweries.address2} ${breweries.address3} ${breweries.city} ${breweries.state} ${breweries.postal_code}"
+            fragmentManagerCommit(breweriesId)
+        }
+
+        viewModel.getDetails(breweriesId)
 
         binding.btnRating.setOnClickListener{
             showRatingDialog(breweriesName)
@@ -94,4 +112,15 @@ class DetailsActivity : AppCompatActivity() {
            dialog.dismiss()
         }
     }
+
+    private fun fragmentManagerCommit(breweriesId: String) {
+        supportFragmentManager.commit {
+            val bundle = Bundle()
+            bundle.putString("breweriesId", breweriesId)
+            replace<GalleryFragment>(R.id.detailsFragment, args = bundle)
+        }
+    }
+
+
+
 }

@@ -89,13 +89,13 @@
             android:id="@+id/opinion_distance"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
-            android:layout_marginStart="99dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
             android:text="0,9km"
             android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="@+id/opinion_star"
-            app:layout_constraintStart_toEndOf="@+id/opinion_star"
-            app:layout_constraintTop_toBottomOf="@+id/bar_name" />
+            app:layout_constraintBottom_toBottomOf="@+id/opinion_type"
+            app:layout_constraintStart_toEndOf="@+id/ellipse_small2"
+            app:layout_constraintTop_toTopOf="@+id/opinion_type"
+            app:layout_constraintVertical_bias="0.4" />
 
         <TextView
             android:id="@+id/opinion_type"
@@ -137,10 +137,11 @@
             android:id="@+id/ellipse_small2"
             android:layout_width="6dp"
             android:layout_height="6dp"
-            android:layout_marginStart="85dp"
+            android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/ellipse_small"
-            app:layout_constraintStart_toEndOf="@+id/opinion_star"
+            app:layout_constraintStart_toEndOf="@+id/opinion_type"
             app:layout_constraintTop_toTopOf="@+id/ellipse_small"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ellipse_small" />
 
         <ImageButton
