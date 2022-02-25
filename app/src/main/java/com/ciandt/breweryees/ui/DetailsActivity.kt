@@ -29,7 +29,6 @@ class DetailsActivity : AppCompatActivity() {
         breweriesId = intent.getStringExtra("breweriesId").toString()
         val breweriesName = "Test"
 
-
         binding.btnRating.setOnClickListener{
             showRatingDialog(breweriesName)
         }

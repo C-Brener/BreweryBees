@@ -247,11 +247,12 @@
             android:layout_height="20dp"
             android:layout_marginEnd="16dp"
             android:background="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/details_heart_btn"
-            app:layout_constraintEnd_toStartOf="@+id/details_heart_btn"
-            app:layout_constraintTop_toTopOf="@+id/details_heart_btn"
             app:srcCompat="@drawable/share_card_opinion"
             tools:ignore="MissingConstraints" />
+            app:layout_constraintBottom_toBottomOf="@id/details_heart_btn"
+            app:layout_constraintEnd_toStartOf="@id/details_heart_btn"
+            app:layout_constraintTop_toTopOf="@id/details_heart_btn"
+            app:srcCompat="@drawable/share_card_opinion"/>
 
         <ImageButton
             android:id="@+id/details_heart_btn"
@@ -261,7 +262,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="18dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/line_divider4"
+            app:layout_constraintTop_toBottomOf="@id/line_divider4"
             app:srcCompat="@drawable/ic_heart_blank" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
