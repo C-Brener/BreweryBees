@@ -18,7 +18,6 @@ class ResultListAdapter(private val breweryessList : List<BreweriesModel>): Recy
 
     override fun onBindViewHolder(holder: ResultListViewHolder, position: Int) {
         holder.bind(breweryessList[position])
-
         holder.itemView.setOnClickListener{view ->
             Toast.makeText(view.context, breweryessList[position].id,Toast.LENGTH_LONG).show()
 

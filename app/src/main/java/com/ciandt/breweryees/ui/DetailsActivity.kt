@@ -44,7 +44,6 @@ class DetailsActivity : AppCompatActivity() {
         val breweriesName = "Test"
         viewModel.getDetails(breweriesId)
 
-
         binding.btnRating.setOnClickListener{
             showRatingDialog(breweriesName)
         }
