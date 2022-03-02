@@ -1,11 +1,15 @@
 package com.ciandt.breweryees.ui
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.ciandt.breweryees.R
 import androidx.appcompat.widget.SearchView
 import com.ciandt.breweryees.databinding.ActivityMainBinding
+import com.ciandt.breweryees.ui.rated_breweries
 import com.ciandt.breweryees.ui.main.ResultFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -35,7 +39,22 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
         })
+//        binding.teste.setOnClickListener {
+//            val intent = Intent(this, rated_breweries::class.java)
+//            startActivity(intent)
+//        }
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menutoolbar, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId== R.id.starRated){
+            val intent = Intent(this, rated_breweries::class.java)
+            startActivity(intent)
+        }
+        return super.onOptionsItemSelected(item)
     }
     fun viewSearch(search:String){
         val fragment = ResultFragment()

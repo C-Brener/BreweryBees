@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreweryBees.Splash">
         <activity
+            android:name=".ui.rated_breweries"
+            android:exported="false" />
+        <activity
             android:name=".ui.DetailsActivity"
             android:exported="false" />
         <activity

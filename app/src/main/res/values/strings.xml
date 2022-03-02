@@ -28,4 +28,13 @@
     <string name="drink">Um Brinde!</string>
     <string name="exit">Exit</string>
     <string name="errorAlert">Email Invalid</string>
+    <string name="fav_btn_description">A heart as favorite button</string>
+    <string name="rated_breweries">Cervejarias avaliadas</string>
+    <string name="ratedText">Cervejariais que você avaliou</string>
+    <string name="warningBreweries">Informe seu e-mail para consultar as \ncervejariais avaliadas</string>
+    <string name="emailSavedRated">Lembrar meu e-mail para futuras consultas</string>
+    <string name="SalveChecked">Confirmar</string>
+    <string name="emptyRatedBreweries">Nenhuma Cervejaria avaliada</string>
+    <string name="textRatedEmpty">Você ainda não avaliou nenhuma\n cervejaria. Suas cervejarias avaliadas \naparecerão aqui.</string>
+    <string name="resultRated">30 resultados</string>
 </resources>
