@@ -7,4 +7,10 @@
         app:showAsAction="ifRoom"
         android:layout_gravity="center_vertical"
         />
+    <item android:id="@+id/favoriteHeart"
+        android:title="Favorite"
+        android:icon="@drawable/heart_favorite"
+        app:showAsAction="ifRoom"
+        android:layout_gravity="center_vertical"
+        />
 </menu>

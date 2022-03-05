@@ -1,19 +1,18 @@
 package com.ciandt.breweryees.ui.ratedBreweries
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.TextUtils
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ciandt.breweryees.R
+import androidx.fragment.app.Fragment
 import com.ciandt.breweryees.databinding.FragmentInitRatedBreweriesBinding
-import com.ciandt.breweryees.ui.main.ResultFragment
-import kotlinx.android.synthetic.main.fragment_init_rated_breweries.*
 
 class initRatedBreweriesFragment : Fragment() {
     private var _binding:FragmentInitRatedBreweriesBinding?=null
     private val binding get() = _binding!!
-    var emailListner : ((String) -> Unit?)? = null
+    var emailListener : ((String) -> Unit?)? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +30,20 @@ class initRatedBreweriesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        fun String.isValidEmail() = !TextUtils.isEmpty(this) && Patterns.EMAIL_ADDRESS.matcher(this).matches()
+        val inputEmail = binding.checkRatedEmail
+
         binding.buttonEmail.setOnClickListener {
-            val emailcapture = binding.inputTextRated.getText().toString()
-            emailListner?.let { it(emailcapture) }
+
+            if(inputEmail.text.toString().isValidEmail()){
+                val emailcapture = binding.inputTextRated.getText().toString()
+                emailListener?.let { it(emailcapture) }
+            }else{
+                inputEmail.error="Email Invalid"
+            }
+
         }
     }
+
 }

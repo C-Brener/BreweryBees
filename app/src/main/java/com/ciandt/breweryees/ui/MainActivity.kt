@@ -4,14 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.ciandt.breweryees.R
 import androidx.appcompat.widget.SearchView
 import com.ciandt.breweryees.databinding.ActivityMainBinding
-import com.ciandt.breweryees.ui.rated_breweries
 import com.ciandt.breweryees.ui.main.ResultFragment
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -51,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId== R.id.starRated){
-            val intent = Intent(this, rated_breweries::class.java)
+            val intent = Intent(this, RatedBreweries::class.java)
             startActivity(intent)
         }
         return super.onOptionsItemSelected(item)

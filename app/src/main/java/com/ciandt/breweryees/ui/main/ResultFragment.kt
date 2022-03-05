@@ -42,6 +42,12 @@ class ResultFragment : Fragment() {
         bundle?.getString("searchCity").toString().apply {
             viewModel.getSearchList(this)
         }
+        viewModel.searchListErrorLiveData.observe(this.viewLifecycleOwner){
+            binding.tryAgain.visibility = View.VISIBLE
+            binding.errorSearch.visibility = View.VISIBLE
+            binding.containerRecycler.visibility = View.GONE
+
+        }
 
     }
 }

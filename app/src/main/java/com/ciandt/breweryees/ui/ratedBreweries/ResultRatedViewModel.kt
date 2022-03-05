@@ -13,9 +13,18 @@ class ResultRatedViewModel(private val breweriesRespository: BreweriesRespositor
     private val _searchListEvaluationsLiveData = MutableLiveData<List<BreweriesModel>>()
     val searchListEvaluationsLiveData : LiveData<List<BreweriesModel>> get() = _searchListEvaluationsLiveData
 
+    private val _searchListErrorEvaluationsLiveData = MutableLiveData<Unit>()
+    val searchListErrorEvaluationsLiveData : LiveData<Unit>get() = _searchListErrorEvaluationsLiveData
+
+
     fun getSearchListEvaluations(email:String){
         viewModelScope.launch {
-            _searchListEvaluationsLiveData.value = breweriesRespository.getBreweriesEvaluations(email)
+            val result =  breweriesRespository.getBreweriesEvaluations(email)
+            if (result.isEmpty()){
+                _searchListErrorEvaluationsLiveData.value = Unit
+            }else{
+                _searchListEvaluationsLiveData.value = result
+            }
         }
     }
 

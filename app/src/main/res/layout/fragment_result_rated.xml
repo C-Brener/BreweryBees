@@ -62,5 +62,40 @@
         app:layout_constraintStart_toStartOf="@id/order_opinion"
         app:layout_constraintTop_toBottomOf="@id/order_opinion"
         tools:listitem="@layout/card_opinion_horizontal" />
-
+    <TextView
+        android:id="@+id/titleEmptyRated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="26dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/emptyRatedBreweries"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/textEmptyRated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titleEmptyRated"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        android:fontFamily="@font/quicksand_regular"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:text="@string/textRatedEmpty"
+        />
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/containerResult"
+        app:constraint_referenced_ids="containerResult, contains_result_opinion, filter_icon_opinion, order_opinion, ratedRecyclerView, top_title"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

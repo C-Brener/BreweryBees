@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     android:background="#F2F2F7">
 
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/containerRecycler"
+        app:constraint_referenced_ids="top_title,order_opinion,filter_icon_opinion,containerRecycler, contains_result_opinion"
+        />
 
     <TextView
         android:id="@+id/top_title"
@@ -63,6 +69,47 @@
         app:layout_constraintStart_toStartOf="@id/order_opinion"
         app:layout_constraintTop_toBottomOf="@id/order_opinion"
         tools:listitem="@layout/card_opinion_horizontal" />
+
+    <TextView
+        android:id="@+id/error_search"
+        android:layout_width="296dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="52dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center_horizontal|top"
+        android:text="@string/no_search"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/try_again"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/quicksand_regular"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="6sp"
+        android:text="@string/try_again"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:translationY="-3sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/error_search" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

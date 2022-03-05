@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ciandt.breweryees.R
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import com.ciandt.breweryees.databinding.FragmentResultRatedBinding
 
@@ -14,6 +13,7 @@ class ResultRatedFragment : Fragment() {
     private var _binding:FragmentResultRatedBinding? = null
     private val binding get() = _binding!!
     private val viewModel: ResultRatedViewModel by viewModel()
+    var captureSize : ((String) -> Unit?)? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,11 @@ class ResultRatedFragment : Fragment() {
         bundle?.getString("inputEmail").toString().run {
             viewModel.getSearchListEvaluations(this)
         }
+
+        viewModel.searchListErrorEvaluationsLiveData.observe(this.viewLifecycleOwner){
+            binding.titleEmptyRated.visibility = View.VISIBLE
+            binding.textEmptyRated.visibility = View.VISIBLE
+            binding.containerResult.visibility = View.GONE
+        }
     }
-
-
 }

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BreweryBees.Splash">
         <activity
-            android:name=".ui.rated_breweries"
+            android:name=".ui.RatedBreweries"
             android:exported="false" />
         <activity
             android:name=".ui.DetailsActivity"
